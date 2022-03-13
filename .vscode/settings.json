@@ -1,0 +1,18 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#222C4B",
+    "titleBar.activeBackground": "#303E69",
+    "titleBar.activeForeground": "#FBFCFD"
+  },
+  "cSpell.words": [
+    "Wordchachos"
+  ],
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "wordchachos",
+      "database": "${workspaceFolder:wordchachos}/database/wordchachos.sqlite3"
+    }
+  ]
+}
