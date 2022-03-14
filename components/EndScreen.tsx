@@ -117,7 +117,8 @@ ${board
   const guessesUsedDataArray = [...Array(guessLength)].map((_, idx) => {
     return sumByGuessesUsed[idx + 1] ?? 0;
   });
-  const dataSet = {
+  // TODO investigate type options with datalabels
+  const dataSet: any = {
     labels: [1, 2, 3, 4, 5, 6],
     datasets: [
       {
@@ -145,7 +146,9 @@ ${board
       },
     ],
   };
-  const options: ChartOptions = {
+  // TODO investigate type issues with ChartOptions and scales prop
+  // const options: ChartOptions = {
+  const options: any = {
     elements: {
       bar: {
         borderWidth: 2,
