@@ -34,7 +34,7 @@ export function KeyBoard(props: {
       )}
     </Row>
     <Row className='justify-content-center d-flex flex-nowrap mx-1'>
-      <Key key={'submitAttempt'} canPress={readyToSubmit} label={<CheckCircle />} value={''} onClick={clickedEnter} className={readyToSubmit ? 'bg-success text-dark' : ''} />
+      <Key key={'submitAttempt'} canPress={readyToSubmit} label={<CheckCircle />} value={''} onClick={clickedEnter} className={readyToSubmit ? 'bg-success text-dark' : ''}/>
       {'ZXCVBNM'.split('').map((key) =>
         <Key active={guess.includes(key)} key={key} label={key} value={key} onClick={clickedLetter} guessState={getLetterGuessState(key)} />
       )}

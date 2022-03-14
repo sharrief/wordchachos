@@ -43,7 +43,8 @@ export function submitGuess(game: Game): Game {
       return { ...game, board: newBoard, guessesChecked }
     }
     /** A correct guess was made. Game won */
-    return { ...game, board: newBoard, guessesChecked, state: GameState.win }
+    const seed = getWordList().reduce((s,w,i) => w.toUpperCase() === answer ? i : s, 0);
+    return { ...game, board: newBoard, guessesChecked, state: GameState.win, seed }
   }
   return game;
 }

@@ -23,11 +23,13 @@ export const Labels = {
   ConfirmationDefaultTitle: 'Are you sure?',
   ConfirmationCancel: 'Cancel',
   ConfirmationConfirm: 'OK',
-  GameTypeWordle: 'wordle',
-  GameTypeRandom: 'random',
-  GameTypeRandomNew: 'random+',
+  GameTypeWordle: 'Wordle',
+  GameTypeRandom: 'Random',
+  GameTypeRandomNew: 'Random+',
   ChangeGameType: 'If you switch game types, your progress in the current game will be lost!',
   StartANewGameButton: "new game+",
   StartANewGameTitle: 'Do you want to start a new game',
   StartANewGame: 'If you start a new game, your progress in the current game will be lost!',
+  ShareGame: 'Copy to share',
+  Copied: 'Copied!'
 };

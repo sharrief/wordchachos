@@ -28,7 +28,7 @@ async function fetchAPI(apiName: string, data: any) {
 
 const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   const [game, setGame] = useState<Game>(initialGame);
-  const { state, board, answer, guessLength, guessIndex, squareIndex, type } = game;
+  const { state, board, guessLength, guessIndex, squareIndex, type } = game;
 
   const [newGameType, setNewGameType] = useState<GameType>();
   const handleChangeGameType = async () => {
@@ -60,6 +60,7 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   const handleCloseNewRandomGame = () => setNewRandomGame(false);
 
   const handleClickNewGame = () => {
+    setShowEndScreen(false);
     if (type === GameType.random) {
       setNewRandomGame(true);
     } else {
@@ -142,13 +143,9 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       />
       <EndScreen
         show={showEndScreen}
-        win={win}
-        loss={loss}
+        game={game}
         onHide={() => setShowEndScreen(false)}
-        guesses={guessIndex}
-        answer={answer}
-        type={type}
-        handleNewRandomGame={handleNewRandomGame}
+        handleNewRandomGame={handleClickNewGame}
       />
       <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
         <ButtonGroup className='mb-2'>

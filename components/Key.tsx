@@ -26,8 +26,8 @@ function KeyComponent(props: {
   return (
       <motion.div
         whileTap={(value || canPress) ? { scale: 0.9 } : {}}
-        className={`${className ?? ''} ${guessState === null ? 'col-2' : 'col-1'} rounded d-flex justify-content-center align-items-center ${guessClass} ${activeClass}`}
-        style={{ height: '4em', margin: '0px 2px 3px 2px' }}
+        className={`${className ?? ''} rounded d-flex justify-content-center align-items-center ${guessClass} ${activeClass}`}
+        style={{ height: '4em', margin: '0px 2px 3px 2px', width: guessState == null ? '15%' : '10%' }}
         onClick={() => handleKeyPress()}
       >
         {label}

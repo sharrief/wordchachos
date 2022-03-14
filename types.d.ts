@@ -29,7 +29,8 @@ export type Game = {
   answer: string;
   guessesChecked: boolean;
   state: GameState;
-  type: GameType
+  type: GameType;
+  seed?: number;
 }
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]
