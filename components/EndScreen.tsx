@@ -20,7 +20,7 @@ export function EndScreen(props: {
   const match = '&#129000;';
   const wrong = '&#11035;';
   const gameResult = `${type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom} ${seed ?? ''} ${guesses}/${guessesAllowed}
-
+  
 ${board
     .filter((_,idx) => idx < guesses)
     .map(({ squares }) => {
@@ -38,8 +38,11 @@ ${board
   }).join(`
 `)}`;
   const [copied, setCopied] = useState(false);
-  
-  return (<Modal show={show} centered onHide={onHide}>
+  const handleOnHide = () => {
+    setCopied(false);
+    onHide();
+  }
+  return (<Modal show={show} centered onHide={handleOnHide}>
     <Modal.Header closeButton>
       <Modal.Title>
         {win && Labels.WinTitle(guesses)}
