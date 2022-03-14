@@ -25,7 +25,7 @@ export function Menu(props: { game: Game, setGameType: (gameType: GameType) => v
     <Container fluid>
       <Row className='w-100 g-0 justify-content-between'>
         <Col xs='2'>
-          <Button variant='link' size='sm' className='d-flex' onClick={showOptions}><Settings /> {game.type === GameType.wordle ? Labels.GameTypeWordle.toLowerCase() : Labels.GameTypeRandom.toLowerCase()}</Button>
+          <Button variant='link' size='sm' className='text-decoration-none d-flex' onClick={showOptions}><Settings /> {game.type === GameType.wordle ? Labels.GameTypeWordle.toLowerCase() : Labels.GameTypeRandom.toLowerCase()}</Button>
           
           </Col>
         <Col xs='auto' className="text-center">
