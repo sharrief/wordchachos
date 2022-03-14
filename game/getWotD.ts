@@ -5,7 +5,7 @@ import { GameType } from '@types';
 export function getWotD(gameType = GameType.wordle) {
   switch (gameType) {
     case GameType.wordle:
-      const wordleEpoch = DateTime.fromObject({ year: 2021, month: 6, day: 17 });
+      const wordleEpoch = DateTime.fromObject({ year: 2021, month: 6, day: 18 });
       const today = DateTime.local({ zone: "America/New_York" });
       const { days } = today.diff(wordleEpoch, 'days');
       const wordleSeed = Math.floor(days);
