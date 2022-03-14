@@ -32,6 +32,7 @@ export type Game = {
   type: GameType;
   seed?: number;
 }
+export type SavedGameV1 = Omit<Game, 'guessIndex'|'squareIndex'|'guessLength'|'guessesChecked'>
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]
 }

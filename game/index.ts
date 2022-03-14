@@ -17,3 +17,5 @@ export {
 } from './guess';
 export { getWotD } from './getWotD';
 export { getWordList as getWordList } from './getWordList';
+export { getSavedGames } from './getSavedGames';
+export { saveGame } from './saveGame'
