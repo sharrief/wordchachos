@@ -16,6 +16,10 @@ export function Menu(props: { game: Game, setGameType: (gameType: GameType) => v
   const [showingOptions, setShowingOptions] = useState(false);
   const showOptions = () => setShowingOptions(true);
   const closeOptions = () => setShowingOptions(false);
+  const handleSetGameType = (t: GameType) => {
+    closeOptions();
+    setGameType(t);
+  }
 
   return <><Navbar expand="lg" variant="dark" bg="dark">
     <Container fluid>
@@ -42,7 +46,7 @@ export function Menu(props: { game: Game, setGameType: (gameType: GameType) => v
     <Modal show={showingOptions} onHide={closeOptions} centered>
       <Modal.Header closeButton>{Labels.Options.toUpperCase()}</Modal.Header>
       <Modal.Body>
-        <Options gameType={game.type} setGameType={setGameType} />
+        <Options gameType={game.type} setGameType={handleSetGameType} />
       </Modal.Body>
     </Modal>
   </>
