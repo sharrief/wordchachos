@@ -1,4 +1,4 @@
-import { Game } from "types";
+import { Game, GameType } from "@types";
 
 function addLetter<B extends { letter: string; game: Game}>(body: B) {
   return fetchRoute<B, Game>('/api/addLetter', body);
@@ -9,11 +9,15 @@ function removeLetter<B extends { game: Game }>(body: B) {
 function submitGuess<B extends { game: Game}>(body: B) {
   return fetchRoute<B, Game>('/api/submitGuess', body);
 }
+function initGame<B extends { gameType: GameType}>(body: B) {
+  return fetchRoute<B, Game>('/api/initGame', body);
+}
 
 export const api = {
   addLetter,
   removeLetter,
   submitGuess,
+  initGame,
 }
 
 /**

@@ -1,8 +1,8 @@
-import { Game, GameState, KeyState } from "@types";
+import { Game, GameState, GameType, KeyState } from "@types";
 import { getWotD } from "./getWotD";
 
-export async function initGame(guessesAllowed = 5): Promise<Game> {
-  const answer = await (await getWotD()).toUpperCase();
+export function initGame(gameType: GameType, guessesAllowed = 5): Game {
+  const answer = (getWotD(gameType)).toUpperCase();
   const guessLength = answer.length;
   const state = KeyState.Unused;
   const board = [...Array(guessesAllowed)]
@@ -24,5 +24,6 @@ export async function initGame(guessesAllowed = 5): Promise<Game> {
     answer,
     guessesChecked: false,
     state: GameState.active,
+    type: gameType,
   }
 }

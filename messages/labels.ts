@@ -20,4 +20,10 @@ export const Labels = {
   WinSubtitle: (guesses: number) => `You won in ${guesses} guesses`,
   LossSubtitle: 'Better luck next time',
   ShareGameMessage: 'Share this game with your friends!',
+  ConfirmationDefaultTitle: 'Are you sure?',
+  ConfirmationCancel: 'Cancel',
+  ConfirmationConfirm: 'OK',
+  GameTypeWordle: 'wordle',
+  GameTypeRandom: 'random',
+  ChangeGameType: 'If you switch game types, your progress in the current game will be lost!'
 };

@@ -17,6 +17,9 @@ export type Board = Guess[];
 export enum GameState {
   active, loss, win,
 }
+export enum GameType {
+  wordle, random
+}
 export type Game = {
   board: Board;
   guessIndex: number;
@@ -26,8 +29,8 @@ export type Game = {
   answer: string;
   guessesChecked: boolean;
   state: GameState;
+  type: GameType
 }
-
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]
 }

@@ -1,13 +1,14 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Alert, Container, Spinner } from 'react-bootstrap'
+import { Alert, ButtonGroup, Container, Spinner, ToggleButton } from 'react-bootstrap'
 import { AnimatePresence, motion } from "framer-motion";
-import "bootswatch/dist/vapor/bootstrap.min.css";
 import { useEffect, useState } from 'react';
 import { GameBoard, EndScreen, KeyBoard, Navigation } from '@components';
-import { KeyState, GameState, Game } from '@types';
-import { initGame } from "game";
+import { KeyState, GameState, Game, GameType } from '@types';
+import { initGame, addLetter, removeLetter } from "game";
 import { api } from 'pages/api/_api';
+import { Confirmation } from 'components/Comfirmation';
+import { Labels } from '@messages';
 
 async function fetchAPI(apiName: string, data: any) {
   const res = await fetch(`/api/${apiName}`, {
@@ -27,7 +28,19 @@ async function fetchAPI(apiName: string, data: any) {
 
 const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   const [game, setGame] = useState<Game>(initialGame);
-  const { state, board, answer, guessLength, guessIndex, squareIndex } = game;
+  const { state, board, answer, guessLength, guessIndex, squareIndex, type } = game;
+  const [newGameType, setNewGameType] = useState<GameType>();
+  const handleChangeGameType = async () => {
+    if (newGameType != null) {
+      const { data: newGame, error } = await api.initGame({ gameType: newGameType });
+      if (error) { setErrorMsg(error); }
+      if (newGame?.board) {
+        setGame({ ...newGame });
+      }
+      setNewGameType(undefined);
+    }
+  };
+  const handleCloseConfirm = () => setNewGameType(undefined);
   let win = state === GameState.win;
   let loss = state === GameState.loss;
   useEffect(() => {
@@ -51,19 +64,15 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       setGame({ ...newGame });
     }
   }
-  const clickedLetter = async (letter: string) => {
+  const clickedLetter = (letter: string) => {
     if (game.state !== GameState.active || busy) return;
-    setBusy(true);
-    const res = await api.addLetter({ letter, game });
-    handleResponse(res);
-    setBusy(false);
+    const updatedGame = addLetter(letter, game);
+    setGame({ ...updatedGame });
   }
   const clickedBackspace = async () => {
     if (game.state !== GameState.active || busy) return;
-    setBusy(true);
-    const res = await api.removeLetter({ game });
-    handleResponse(res);
-    setBusy(false);
+    const updatedGame = removeLetter(game);
+    setGame({ ...updatedGame });
   }
   const clickedEnter = async () => {
     if (game.state !== GameState.active) {
@@ -77,15 +86,15 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   };
 
   const getKeyGuessState = (letter: string) => board
-  .filter((_, gI) => gI < guessIndex)
-  .reduce((stateForCurrentKey, guess) => {
-    if (stateForCurrentKey === KeyState.Position) return stateForCurrentKey;
-    const matchingSquare = guess.squares.find((square) => square.letter === letter);
-    if (matchingSquare) {
-      return matchingSquare.state;
-    };
-    return stateForCurrentKey;
-  }, KeyState.Unused as KeyState);
+    .filter((_, gI) => gI < guessIndex)
+    .reduce((stateForCurrentKey, guess) => {
+      if (stateForCurrentKey === KeyState.Position) return stateForCurrentKey;
+      const matchingSquare = guess.squares.find((square) => square.letter === letter);
+      if (matchingSquare) {
+        return matchingSquare.state;
+      };
+      return stateForCurrentKey;
+    }, KeyState.Unused as KeyState);
 
   return (
     <div className='vh-100'>
@@ -93,6 +102,12 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         <title>Wordchachos</title>
       </Head>
       <Navigation />
+      <Confirmation
+        show={newGameType != null}
+        message={Labels.ChangeGameType}
+        cancel={handleCloseConfirm}
+        confirm={handleChangeGameType}
+      />
       <EndScreen
         show={showEndScreen}
         win={win}
@@ -102,6 +117,30 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         answer={answer}
       />
       <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
+        <ButtonGroup className='mb-2'>
+          <ToggleButton
+            id={`radio-${GameType.wordle}`}
+            type="radio"
+            variant={'outline-secondary'}
+            name={"radio-wordle"}
+            value={GameType.wordle}
+            checked={type === GameType.wordle}
+            onChange={() => setNewGameType(GameType.wordle)}
+          >
+            {Labels.GameTypeWordle}
+          </ToggleButton>
+          <ToggleButton
+            id={`radio-${GameType.random}`}
+            type="radio"
+            variant={'outline-secondary'}
+            name={"radio-random"}
+            value={GameType.random}
+            checked={type === GameType.random}
+            onChange={() => setNewGameType(GameType.random)}
+          >
+            {Labels.GameTypeRandom}
+          </ToggleButton>
+        </ButtonGroup>
         <GameBoard game={game} />
       </Container>
       <Container className='fixed-bottom '>
@@ -141,7 +180,7 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
 }
 
 export async function getServerSideProps() {
-  const game = await initGame();
+  const game = await initGame(GameType.wordle);
   return { props: { game } }
 }
 
