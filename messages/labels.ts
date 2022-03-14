@@ -25,5 +25,9 @@ export const Labels = {
   ConfirmationConfirm: 'OK',
   GameTypeWordle: 'wordle',
   GameTypeRandom: 'random',
-  ChangeGameType: 'If you switch game types, your progress in the current game will be lost!'
+  GameTypeRandomNew: 'random+',
+  ChangeGameType: 'If you switch game types, your progress in the current game will be lost!',
+  StartANewGameButton: "new game+",
+  StartANewGameTitle: 'Do you want to start a new game',
+  StartANewGame: 'If you start a new game, your progress in the current game will be lost!',
 };

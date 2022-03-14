@@ -1,7 +1,7 @@
 import { Game, GameState, GameType, KeyState } from "@types";
 import { getWotD } from "./getWotD";
 
-export function initGame(gameType: GameType, guessesAllowed = 5): Game {
+export function initGame(gameType: GameType, guessesAllowed = 6): Game {
   const answer = (getWotD(gameType)).toUpperCase();
   const guessLength = answer.length;
   const state = KeyState.Unused;

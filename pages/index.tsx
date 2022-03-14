@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Alert, ButtonGroup, Container, Spinner, ToggleButton } from 'react-bootstrap'
+import { Alert, Button, ButtonGroup, Container, Spinner, ToggleButton } from 'react-bootstrap'
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from 'react';
 import { GameBoard, EndScreen, KeyBoard, Navigation } from '@components';
@@ -29,9 +29,10 @@ async function fetchAPI(apiName: string, data: any) {
 const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   const [game, setGame] = useState<Game>(initialGame);
   const { state, board, answer, guessLength, guessIndex, squareIndex, type } = game;
+
   const [newGameType, setNewGameType] = useState<GameType>();
   const handleChangeGameType = async () => {
-    if (newGameType != null) {
+    if (newGameType != null && newGameType !== type) {
       const { data: newGame, error } = await api.initGame({ gameType: newGameType });
       if (error) { setErrorMsg(error); }
       if (newGame?.board) {
@@ -40,7 +41,32 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       setNewGameType(undefined);
     }
   };
-  const handleCloseConfirm = () => setNewGameType(undefined);
+  const handleCloseChangeGameType = () => setNewGameType(undefined);
+
+  const [newRandomGame, setNewRandomGame] = useState(false);
+  const handleNewRandomGame = async () => {
+    setBusy(true);
+    if (type === GameType.random && newRandomGame === true) {
+      const { data: newGame, error } = await api.initGame({ gameType: GameType.random });
+      if (error) { setErrorMsg(error); }
+      if (newGame?.board) {
+        setGame({ ...newGame });
+      }
+      setNewRandomGame(false);
+      setShowEndScreen(false);
+    }
+    setBusy(false);
+  }
+  const handleCloseNewRandomGame = () => setNewRandomGame(false);
+
+  const handleClickNewGame = () => {
+    if (type === GameType.random) {
+      setNewRandomGame(true);
+    } else {
+      setNewGameType(GameType.random);
+    }
+  }
+
   let win = state === GameState.win;
   let loss = state === GameState.loss;
   useEffect(() => {
@@ -105,8 +131,14 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       <Confirmation
         show={newGameType != null}
         message={Labels.ChangeGameType}
-        cancel={handleCloseConfirm}
+        cancel={handleCloseChangeGameType}
         confirm={handleChangeGameType}
+      />
+      <Confirmation
+        show={newRandomGame === true}
+        message={Labels.StartANewGameTitle}
+        cancel={handleCloseNewRandomGame}
+        confirm={handleNewRandomGame}
       />
       <EndScreen
         show={showEndScreen}
@@ -115,31 +147,23 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         onHide={() => setShowEndScreen(false)}
         guesses={guessIndex}
         answer={answer}
+        type={type}
+        handleNewRandomGame={handleNewRandomGame}
       />
       <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
         <ButtonGroup className='mb-2'>
-          <ToggleButton
-            id={`radio-${GameType.wordle}`}
-            type="radio"
-            variant={'outline-secondary'}
-            name={"radio-wordle"}
-            value={GameType.wordle}
-            checked={type === GameType.wordle}
-            onChange={() => setNewGameType(GameType.wordle)}
+          <Button
+            variant={type === GameType.wordle ? 'secondary' : 'outline-secondary'}
+            onClick={() => setNewGameType(GameType.wordle)}
           >
             {Labels.GameTypeWordle}
-          </ToggleButton>
-          <ToggleButton
-            id={`radio-${GameType.random}`}
-            type="radio"
-            variant={'outline-secondary'}
-            name={"radio-random"}
-            value={GameType.random}
-            checked={type === GameType.random}
-            onChange={() => setNewGameType(GameType.random)}
+          </Button>
+          <Button
+            variant={type === GameType.random ? 'secondary' : 'outline-secondary'}
+            onClick={handleClickNewGame}
           >
-            {Labels.GameTypeRandom}
-          </ToggleButton>
+            {type === GameType.random ? Labels.GameTypeRandomNew : Labels.GameTypeRandom}
+          </Button>
         </ButtonGroup>
         <GameBoard game={game} />
       </Container>
@@ -170,6 +194,8 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
             clickedBackspace,
             clickedEnter,
             getLetterGuessState: getKeyGuessState,
+            board,
+            guessIndex,
             readyToSubmit,
             canBackspace
           }}

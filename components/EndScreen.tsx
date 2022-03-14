@@ -1,5 +1,6 @@
-import { Modal } from "react-bootstrap";
-import {Labels} from "messages";
+import { Button, Modal } from "react-bootstrap";
+import {Labels} from "@messages";
+import { GameType } from "@types";
 
 export function EndScreen(props: {
   show: boolean;
@@ -8,8 +9,10 @@ export function EndScreen(props: {
   onHide: () => void;
   guesses: number;
   answer: string;
+  type: GameType;
+  handleNewRandomGame: () => void;
 }) {
-  const { show, win, loss, onHide, guesses, answer } = props;
+  const { show, win, loss, onHide, guesses, answer, type, handleNewRandomGame } = props;
   return (<Modal show={show} centered onHide={onHide}>
     <Modal.Header closeButton>
       <Modal.Title>
@@ -27,6 +30,13 @@ export function EndScreen(props: {
         {win && `Share this game with your friends!`}
         {loss && `Maybe don't share this game with your friends!`}
       </p>
+      {type === GameType.random 
+      && <Button 
+        variant='secondary'
+        onClick={handleNewRandomGame}
+      >
+        {Labels.StartANewGameButton}
+      </Button>}
     </Modal.Body>
   </Modal>)
 }

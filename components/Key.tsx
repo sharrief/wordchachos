@@ -10,8 +10,9 @@ function KeyComponent(props: {
   onClick: (letter: string) => void,
   guessState?: KeyState,
   className?: string;
+  active?: boolean;
 }) {
-  const { label, value, onClick, canPress, guessState, className } = props;
+  const { label, value, active, onClick, canPress, guessState, className } = props;
   const handleKeyPress = () => {
     onClick(value);
   }
@@ -20,10 +21,12 @@ function KeyComponent(props: {
   if (guessState === KeyState.Wrong) guessClass = 'bg-dark text-danger';
   if (guessState === KeyState.Match) guessClass = 'bg-warning text-dark';
   if (guessState === KeyState.Position) guessClass = 'bg-success text-dark';
+  let activeClass = '';
+  if (active) activeClass = 'border border-info border-2';
   return (
       <motion.div
         whileTap={(value || canPress) ? { scale: 0.9 } : {}}
-        className={`${className ?? ''} ${guessState === null ? 'col-2' : 'col-1'} rounded d-flex justify-content-center align-items-center ${guessClass}`}
+        className={`${className ?? ''} ${guessState === null ? 'col-2' : 'col-1'} rounded d-flex justify-content-center align-items-center ${guessClass} ${activeClass}`}
         style={{ height: '4em', margin: '0px 2px 3px 2px' }}
         onClick={() => handleKeyPress()}
       >
