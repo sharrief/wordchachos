@@ -28,7 +28,7 @@ export const Labels = {
   GameTypeRandom: 'Random',
   GameTypeRandomNew: 'Random+',
   ChangeGameType: 'If you switch game types, your progress in the current game will be lost!',
-  StartANewGameButton: "New game",
+  StartANewGameButton: 'New game',
   StartANewGameTitle: 'Do you want to start a new game',
   StartANewGame: 'If you start a new game, your progress in the current game will be lost!',
   ShareGame: 'Copy to share',

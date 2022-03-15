@@ -1,22 +1,25 @@
-import { Game, GameState, GameType, KeyState, SimpleDate } from "@types";
-import { DateTime } from "luxon";
-import { v4 as uuid } from "uuid";
-import { getWotD } from "./getWotD";
+import {
+  Game, GameState, GameType, KeyState, SimpleDate,
+} from 'types';
+import { DateTime } from 'luxon';
+import { v4 as uuid } from 'uuid';
+import { getWotD } from 'game/getWotD';
 
 export const getUninitializedGame = (gameType = GameType.wordle, guessesAllowed = 6): Game => {
   const answer = '';
   const guessLength = 5;
   const state = KeyState.Unused;
   const board = [...Array(guessesAllowed)]
-  .map(() => {
-    return { checked: false , squares: [...Array(guessLength)]
-      .map(() => {
-      const letter = '';
-      return {
-        letter, state
-      }
-    })}
-  });
+    .map(() => ({
+      checked: false,
+      squares: [...Array(guessLength)]
+        .map(() => {
+          const letter = '';
+          return {
+            letter, state,
+          };
+        }),
+    }));
   return {
     board,
     guessIndex: 0,
@@ -31,11 +34,11 @@ export const getUninitializedGame = (gameType = GameType.wordle, guessesAllowed 
     id: '',
     timestamp: 0,
     version: 1,
-  }
-}
+  };
+};
 
 export function initGame(gameType: GameType, date: SimpleDate, guessesAllowed = 6): Game {
-  const {seed, answer} = (getWotD(gameType, date));
+  const { seed, answer } = (getWotD(date, gameType));
   const guessLength = answer.length;
   const timestamp = DateTime.local().valueOf();
   const id = uuid();
@@ -48,5 +51,5 @@ export function initGame(gameType: GameType, date: SimpleDate, guessesAllowed = 
     timestamp,
     id,
     type: gameType,
-  }
+  };
 }

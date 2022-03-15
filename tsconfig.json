@@ -2,12 +2,12 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@components": ["components/index"],
-      "@game": ["game/index"],
-      "@api": ["pages/api/api"],
-      "@types": ["types.d"],
-      "@util": ["util/*"],
-      "@messages": ["messages/index"],
+      "components/*": ["components/*"],
+      "game/*": ["game/*"],
+      "api/*": ["pages/api/*"],
+      "types": ["types.d"],
+      "util/*": ["util/*"],
+      "messages/*": ["messages/*"],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

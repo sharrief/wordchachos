@@ -1,6 +1,6 @@
-import { submitGuess } from 'game';
-import { api } from 'pages/api/_api'
-import { Req, Res } from '@types';
+import { submitGuess } from 'game/submitGuess';
+import { api } from 'pages/api/_api';
+import { Req, Res } from 'types';
 
 export default function handler<T extends typeof api.submitGuess>(req: Req<T>, res: Res<T>) {
   try {
@@ -8,6 +8,6 @@ export default function handler<T extends typeof api.submitGuess>(req: Req<T>, r
     const newGame = submitGuess(game);
     res.send({ data: newGame });
   } catch ({ message }) {
-    res.send(({ error: message }))
+    res.send(({ error: message }));
   }
 }

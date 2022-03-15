@@ -1,19 +1,16 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import { SWRConfig } from 'swr';
 import Home from './home';
 
-const Index: NextPage = () => {
-  
-  return (
+const Index: NextPage = () => (
     <SWRConfig
     value={{
-      revalidateIfStale: false, 
-      revalidateOnFocus: false, 
-      revalidateOnReconnect: false 
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
     }}>
       <Home />
     </SWRConfig>
-  )
-}
+);
 
-export default Index
+export default Index;

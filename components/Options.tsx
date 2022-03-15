@@ -1,6 +1,8 @@
-import { Labels } from "@messages";
-import { Container, Row, Col, ButtonGroup, Button } from "react-bootstrap";
-import { GameType } from "@types";
+import { Labels } from 'messages/labels';
+import {
+  Container, Row, Col, ButtonGroup, Button,
+} from 'react-bootstrap';
+import { GameType } from 'types';
 
 export function Options(props: {
   gameType: GameType;
@@ -27,5 +29,5 @@ export function Options(props: {
         </ButtonGroup>
       </Col>
     </Row>
-  </Container>
+  </Container>;
 }

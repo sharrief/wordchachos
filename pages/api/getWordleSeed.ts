@@ -1,6 +1,6 @@
-import { getWordleSeed } from 'game';
-import { api } from 'pages/api/_api'
-import { Req, Res } from '@types';
+import { getWordleSeed } from 'game/getWordleSeed';
+import { api } from 'pages/api/_api';
+import { Req, Res } from 'types';
 
 export default function handler<T extends typeof api.getWordleSeed>(req: Req<T>, res: Res<T>) {
   try {
@@ -8,6 +8,6 @@ export default function handler<T extends typeof api.getWordleSeed>(req: Req<T>,
     const seed = getWordleSeed(year, month, day);
     res.send({ data: seed });
   } catch ({ message }) {
-    res.send(({ error: message }))
+    res.send(({ error: message }));
   }
 }

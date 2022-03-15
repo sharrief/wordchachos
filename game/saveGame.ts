@@ -1,6 +1,4 @@
-import { Game } from "@types";
-import { DateTime } from "luxon";
-import { v4 as uuid } from 'uuid';
+import { Game } from 'types';
 
 export const SAVED_GAMES_KEY_V1 = 'wordchachos-saved-games-v1';
 
@@ -16,4 +14,3 @@ export function saveGame(game: Game) {
   }
   localStorage.setItem(`${SAVED_GAMES_KEY_V1}`, JSON.stringify(allGames));
 }
-

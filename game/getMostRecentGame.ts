@@ -1,5 +1,5 @@
-import { Game, GameType } from "@types";
-import { SAVED_GAMES_KEY_V1 } from "./saveGame";
+import { Game, GameType } from 'types';
+import { SAVED_GAMES_KEY_V1 } from 'game/saveGame';
 
 export function getMostRecentGame(gameType = GameType.wordle) {
   const allGamesString = localStorage.getItem(SAVED_GAMES_KEY_V1);
@@ -17,4 +17,3 @@ export function getMostRecentGame(gameType = GameType.wordle) {
   const [mostRecentGame] = gamesOfType;
   return mostRecentGame;
 }
-

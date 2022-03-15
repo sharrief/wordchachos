@@ -6,4 +6,4 @@ export const Errors = {
   AllSquaresFilled: 'All squares have been filled',
   LetterIndexSubzero: 'Cannot remove a letter with a subzero index',
   CantGetSeed: 'There was an error loading the seed for the Wordle',
-}
+};

@@ -1,6 +1,6 @@
-import { addLetter } from 'game';
-import { api } from 'pages/api/_api'
-import { Req, Res } from '@types';
+import { addLetter } from 'game/addLetter';
+import { api } from 'pages/api/_api';
+import { Req, Res } from 'types';
 
 export default function handler<T extends typeof api.addLetter>(req: Req<T>, res: Res<T>) {
   try {
@@ -8,6 +8,6 @@ export default function handler<T extends typeof api.addLetter>(req: Req<T>, res
     const newGame = addLetter(letter, game);
     res.send({ data: newGame });
   } catch ({ message }) {
-    res.send(({ error: message }))
+    res.send(({ error: message }));
   }
 }

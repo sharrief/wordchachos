@@ -1,33 +1,16 @@
-import { Button, ButtonGroup, Container, Modal } from "react-bootstrap";
-import { Labels } from "@messages";
-import { Game, GameState, GameType, KeyState } from "@types";
-import { Add, Share } from "@material-ui/icons";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useEffect, useState } from "react";
-import * as emoji from 'github-emoji';
-import { saveGame } from "@game";
-import ChartDataLabels from 'chartjs-plugin-datalabels';
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { GameStats } from "@components";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-  ChartDataLabels,
-);
-
+  Button, ButtonGroup, Container, Modal,
+} from 'react-bootstrap';
+import { Labels } from 'messages/labels';
+import {
+  Game, GameState, GameType, KeyState,
+} from 'types';
+import { Add, Share } from '@material-ui/icons';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { useEffect, useState } from 'react';
+import * as emoji from 'github-emoji';
+import { saveGame } from 'game/saveGame';
+import { GameStats } from 'components/Stats';
 
 export function EndScreen(props: {
   show: boolean;
@@ -35,40 +18,39 @@ export function EndScreen(props: {
   onHide: () => void;
   handleNewRandomGame: () => void;
 }) {
-  const { show, game, onHide, handleNewRandomGame } = props;
-  const [gameSaved, setGameSaved] = useState(false);
+  const {
+    show, game, onHide, handleNewRandomGame,
+  } = props;
   useEffect(() => {
     if (game?.state !== GameState.active) {
       saveGame(game);
-      setGameSaved(true);
     }
-  }, [game])
-  const { board, state, guessIndex: guesses, answer, type, seed, guessesAllowed } = game;
+  }, [game]);
+  const {
+    board, state, guessIndex: guesses, answer, type, seed, guessesAllowed,
+  } = game;
   const win = state === GameState.win;
   const loss = state === GameState.loss;
   const gameResult = `${type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom} ${seed ?? ''} ${guesses}/${guessesAllowed}
   
 ${board.filter((_, idx) => idx < guesses)
-      .map(({ squares }) => {
-        return squares.map(({ state }) => {
-          switch (state) {
-            case KeyState.Position:
-              return emoji.stringOf('green_square');
-            case KeyState.Match:
-              return emoji.stringOf('yellow_square');
-            case KeyState.Wrong:
-            default:
-              return emoji.stringOf('black_large_square');
-          }
-        }).join('');
-      }).join(`
+    .map(({ squares }) => squares.map(({ state: s }) => {
+      switch (s) {
+        case KeyState.Position:
+          return emoji.stringOf('green_square');
+        case KeyState.Match:
+          return emoji.stringOf('yellow_square');
+        case KeyState.Wrong:
+        default:
+          return emoji.stringOf('black_large_square');
+      }
+    }).join('')).join(`
 `)}`;
   const [copied, setCopied] = useState(false);
   const handleOnHide = () => {
     setCopied(false);
     onHide();
-  }
-  
+  };
 
   return (<Modal show={show} centered onHide={handleOnHide}>
     <Modal.Header closeButton>
@@ -81,7 +63,7 @@ ${board.filter((_, idx) => idx < guesses)
           {win && `${Labels.WinTitle(guesses).toLocaleUpperCase()} ${Labels.WinSubtitle(guesses)}`}
           {loss && `${Labels.LossTitle} ${Labels.LossSubtitle}`}
         </h4>
-        <h5>{Labels.TheAnswerWas} {(win||loss) ? answer : ''}</h5>
+        <h5>{Labels.TheAnswerWas} {(win || loss) ? answer : ''}</h5>
         <p>{Labels.ShareGameMessage}</p>
         <ButtonGroup>
           <CopyToClipboard
@@ -104,5 +86,5 @@ ${board.filter((_, idx) => idx < guesses)
       <hr className="border border-1" />
       <GameStats show={show} game={game} />
     </Modal.Body>
-  </Modal>)
+  </Modal>);
 }

@@ -1,38 +1,26 @@
-import { Game, GameType, SimpleDate } from "@types";
+import { Game, GameType, SimpleDate } from 'types';
 
-function addLetter<B extends { letter: string; game: Game}>(body: B) {
-  return fetchRoute<B, Game>('/api/addLetter', body);
+function createRequest<T>(postData: T) {
+  return {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(postData),
+  };
 }
-function removeLetter<B extends { game: Game }>(body: B) {
-  return fetchRoute<B, Game>('/api/removeLetter', body);
-}
-function submitGuess<B extends { game: Game}>(body: B) {
-  return fetchRoute<B, Game>('/api/submitGuess', body);
-}
-function initGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
-  return fetchRoute<B, Game>('/api/initGame', body);
-}
-function getWordleSeed<B extends SimpleDate>(body: B) {
-  return fetchRoute<B, number>('/api/getWordleSeed');
-}
-export const api = {
-  addLetter,
-  removeLetter,
-  submitGuess,
-  initGame,
-  getWordleSeed,
-}
-
 /**
- * 
+ *
  * @param endpoint The URL to fetch
  * @param postData (Optional) The body for making a POST requests
  * @returns The JSON data from the server and/or an error message
  */
-async function fetchRoute<T,M>(endpoint: string, postData?: T): Promise<{ error: string, data?: M}> {
+async function fetchRoute<T, M>(endpoint: string, postData?: T): Promise<{ error: string, data?: M}> {
   try {
-    const res = (postData ? await fetch(endpoint, createRequest(postData)) : await fetch(endpoint,
-      { credentials: 'same-origin' }));
+    const res = (postData ? await fetch(endpoint, createRequest(postData)) : await fetch(
+      endpoint,
+      { credentials: 'same-origin' },
+    ));
     if (res.redirected) {
       window.location.href = res.url;
     }
@@ -47,19 +35,33 @@ async function fetchRoute<T,M>(endpoint: string, postData?: T): Promise<{ error:
     }
     const { redirect, ...responseData } = await res.json();
     if (redirect) {
-      window.location.href = redirect; return {error: ''};
+      window.location.href = redirect; return { error: '' };
     }
     return { ...responseData };
   } catch ({ message }) {
     return { error: message as string };
   }
-};
-function createRequest<T>(postData: T) {
-  return {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(postData),
-  };
+}
+
+function addLetter<B extends { letter: string; game: Game}>(body: B) {
+  return fetchRoute<B, Game>('/api/addLetter', body);
+}
+function removeLetter<B extends { game: Game }>(body: B) {
+  return fetchRoute<B, Game>('/api/removeLetter', body);
+}
+function submitGuess<B extends { game: Game}>(body: B) {
+  return fetchRoute<B, Game>('/api/submitGuess', body);
+}
+function initGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
+  return fetchRoute<B, Game>('/api/initGame', body);
+}
+function getWordleSeed<B extends SimpleDate>(body: B) {
+  return fetchRoute<B, number>('/api/getWordleSeed', body);
+}
+export const api = {
+  addLetter,
+  removeLetter,
+  submitGuess,
+  initGame,
+  getWordleSeed,
 };
