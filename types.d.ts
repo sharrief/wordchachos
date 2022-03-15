@@ -32,7 +32,17 @@ export type Game = {
   type: GameType;
   seed?: number;
 }
+export type SimpleDate = {
+  year: number;
+  month: number;
+  day: number;
+}
 export type SavedGameV1 = Omit<Game, 'guessIndex'|'squareIndex'|'guessLength'|'guessesChecked'>
+export type SavedActiveGame = Game & {
+  timestamp: number;
+  id: string;
+  version: number;
+}
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]
 }

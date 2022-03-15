@@ -1,11 +1,8 @@
-import { Accordion, Button, ButtonGroup, Card, Col, Container, Modal, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Labels } from "@messages";
-import { Game, GameState, GameType, KeyState, SavedGameV1 } from "@types";
-import { Add, Share } from "@material-ui/icons";
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { Game, GameState, SavedGameV1 } from "@types";
 import { useEffect, useState } from "react";
-import * as emoji from 'github-emoji';
-import { saveGame, getSavedGames } from "@game";
+import { getSavedGames } from "@game";
 import { Bar } from 'react-chartjs-2';
 import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
 import {
@@ -16,7 +13,6 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions,
 } from 'chart.js';
 
 ChartJS.register(

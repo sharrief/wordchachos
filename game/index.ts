@@ -1,4 +1,4 @@
-export { initGame } from './initGame';
+export { initGame, getEmptyGame } from './initGame';
 export { submitGuess } from './submitGuess';
 export { addLetter } from './addLetter';
 export { removeLetter } from './removeLetter';
@@ -15,7 +15,9 @@ export {
   getGuessString, 
   updateLetterStates
 } from './guess';
+export { getWordleSeed } from './getWordleSeed';
 export { getWotD } from './getWotD';
 export { getWordList as getWordList } from './getWordList';
 export { getSavedGames } from './getSavedGames';
 export { saveGame } from './saveGame'
+export { saveActiveGame } from './saveActiveGame';

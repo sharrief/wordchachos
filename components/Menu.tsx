@@ -20,13 +20,15 @@ export function Menu(props: { game: Game, setGameType: (gameType: GameType) => v
   return <><Navbar expand="lg" variant="dark" bg="dark">
     <Container fluid>
       <Row className='w-100 g-0 justify-content-between'>
-        <Col xs='2'></Col>
+        <Col xs='2'>
+          <Button variant='link' size='sm' className='d-flex' onClick={showOptions}><Settings /> {game.type === GameType.wordle ? Labels.GameTypeWordle.toLowerCase() : Labels.GameTypeRandom.toLowerCase()}</Button>
+          
+          </Col>
         <Col xs='auto' className="text-center">
           <Navbar.Brand className="m-0">{Labels.SiteTitle.toUpperCase()}</Navbar.Brand>
         </Col>
-        <Col xs='2' className='d-flex flex-row justify-content-between'>
-          <div onClick={showStats}><BarChart /></div>
-          <div onClick={showOptions}><Settings /></div>
+        <Col xs='2' className='d-flex flex-row justify-content-end'>
+          <Button variant='link' size='sm' onClick={showStats}><BarChart /></Button>
         </Col>
       </Row>
     </Container>

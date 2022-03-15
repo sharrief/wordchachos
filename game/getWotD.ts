@@ -1,14 +1,13 @@
 import { answerWords } from './wordList';
-import { DateTime } from 'luxon';
-import { GameType } from '@types';
+import { GameType, SimpleDate } from '@types';
+import { getWordleSeed } from './getWordleSeed';
 
-export function getWotD(gameType = GameType.wordle) {
+export function getWotD(gameType = GameType.wordle, date: SimpleDate) {
   switch (gameType) {
     case GameType.wordle:
-      const wordleEpoch = DateTime.fromObject({ year: 2021, month: 6, day: 17 });
-      const today = DateTime.local({ zone: "America/New_York" });
-      const { days } = today.diff(wordleEpoch, 'days');
-      const wordleSeed = Math.floor(days);
+      if (!date) throw new Error('No date was given when attempting to get the Wordle of the day.')
+      const { year, month, day } = date;
+      const wordleSeed = getWordleSeed(year, month, day);
       return answerWords[wordleSeed] || 'error';
     case GameType.random:
     default:
