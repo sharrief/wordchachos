@@ -17,7 +17,7 @@ function KeyComponent(props: {
     onClick(value);
   }
   let guessClass = 'bg-primary';
-  if (!value && !canPress) guessClass = 'bg-dark text-dark'
+  if (!value && !canPress) guessClass = 'bg-dark text-primary'
   if (guessState === KeyState.Wrong) guessClass = 'bg-dark text-danger';
   if (guessState === KeyState.Match) guessClass = 'bg-warning text-dark';
   if (guessState === KeyState.Position) guessClass = 'bg-success text-dark';

@@ -3,28 +3,12 @@ import Head from 'next/head'
 import { Alert, Button, ButtonGroup, Container, Spinner, ToggleButton } from 'react-bootstrap'
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from 'react';
-import { GameBoard, EndScreen, KeyBoard, Navigation } from '@components';
+import { GameBoard, EndScreen, KeyBoard, Menu } from '@components';
 import { KeyState, GameState, Game, GameType } from '@types';
 import { initGame, addLetter, removeLetter } from "game";
 import { api } from 'pages/api/_api';
 import { Confirmation } from 'components/Comfirmation';
 import { Labels } from '@messages';
-
-async function fetchAPI(apiName: string, data: any) {
-  const res = await fetch(`/api/${apiName}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-  })
-  const { ok } = res;
-  if (ok) {
-    const responseData = await res.json();
-    return responseData;
-  }
-  return {};
-}
 
 const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   const [game, setGame] = useState<Game>(initialGame);
@@ -38,8 +22,9 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       if (newGame?.board) {
         setGame({ ...newGame });
       }
-      setNewGameType(undefined);
     }
+    setNewGameType(undefined);
+
   };
   const handleCloseChangeGameType = () => setNewGameType(undefined);
 
@@ -75,10 +60,16 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
       setShowEndScreen(true);
   }, [win, loss])
   const [showEndScreen, setShowEndScreen] = useState(false);
+
   const readyToSubmit = squareIndex === guessLength;
   const canBackspace = squareIndex > 0;
   const [busy, setBusy] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  useEffect(() => {
+    if (errorMsg) {
+      setTimeout(() => setErrorMsg(''), 1000);
+    }
+  }, [errorMsg])
   useEffect(() => {
     if (busy) { setErrorMsg(''); }
   }, [busy])
@@ -126,7 +117,7 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
   return (
     <div className='h-100 d-flex flex-column justify-content-between'>
       <Head>
-        <title>Wordchachos</title>
+        <title>{Labels.SiteTitle}</title>
       </Head>
       <Confirmation
         show={newGameType != null}
@@ -147,36 +138,13 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         handleNewRandomGame={handleClickNewGame}
       />
       <div>
-      <Navigation />
+      <Menu game={game} setGameType={setNewGameType}/>
       <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
-        <ButtonGroup className='mb-2'>
-          <Button
-            variant={type === GameType.wordle ? 'secondary' : 'outline-secondary'}
-            onClick={() => setNewGameType(GameType.wordle)}
-          >
-            {Labels.GameTypeWordle}
-          </Button>
-          <Button
-            variant={type === GameType.random ? 'secondary' : 'outline-secondary'}
-            onClick={handleClickNewGame}
-          >
-            {type === GameType.random ? Labels.GameTypeRandomNew : Labels.GameTypeRandom}
-          </Button>
-        </ButtonGroup>
         <GameBoard game={game} />
       </Container>
       </div>
       <Container className=''>
-        <AnimatePresence>
-          <motion.div
-            key={`${busy}`}
-            style={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: [1, 0] }}
-          >
-            {busy && <div className='d-flex justify-content-center mb-2' ><Spinner animation='border' /></div>}
-          </motion.div>
-        </AnimatePresence>
+        <div className='fixed-top mt-5'>
         <AnimatePresence>
           <motion.div
             key={errorMsg}
@@ -187,6 +155,7 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
             {errorMsg !== '' && <Alert variant='danger' onClose={closeError} dismissible>{errorMsg}</Alert>}
           </motion.div>
         </AnimatePresence>
+        </div>
         <KeyBoard
           {...{
             clickedLetter,
@@ -196,7 +165,8 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
             board,
             guessIndex,
             readyToSubmit,
-            canBackspace
+            canBackspace,
+            busy,
           }}
         />
       </Container>

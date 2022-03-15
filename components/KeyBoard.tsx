@@ -1,5 +1,5 @@
 import { CheckCircle, Backspace } from "@material-ui/icons";
-import { Container, Row } from "react-bootstrap";
+import { Container, Row, Spinner } from "react-bootstrap";
 import { Key } from "./Key";
 import { Board, KeyState } from '../types';
 
@@ -8,6 +8,7 @@ export function KeyBoard(props: {
   clickedBackspace: () => void;
   clickedEnter: () => void;
   getLetterGuessState: (letter: string) => KeyState;
+  busy: boolean;
   readyToSubmit: boolean;
   canBackspace: boolean;
   board: Board;
@@ -16,7 +17,7 @@ export function KeyBoard(props: {
   const {
     clickedLetter,
     clickedBackspace,
-    clickedEnter,
+    clickedEnter, busy,
     getLetterGuessState,
     readyToSubmit, canBackspace,
     board, guessIndex } = props;
@@ -34,7 +35,7 @@ export function KeyBoard(props: {
       )}
     </Row>
     <Row className='justify-content-center d-flex flex-nowrap mx-1'>
-      <Key key={'submitAttempt'} canPress={readyToSubmit} label={<CheckCircle />} value={''} onClick={clickedEnter} className={readyToSubmit ? 'bg-success text-dark' : ''}/>
+      <Key key={'submitAttempt'} canPress={readyToSubmit} label={busy ? <Spinner animation='grow'/> : <CheckCircle />} value={''} onClick={clickedEnter} className={readyToSubmit ? 'bg-success text-dark' : ''}/>
       {'ZXCVBNM'.split('').map((key) =>
         <Key active={guess.includes(key)} key={key} label={key} value={key} onClick={clickedLetter} guessState={getLetterGuessState(key)} />
       )}
