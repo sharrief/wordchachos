@@ -10,7 +10,7 @@ export function Options(props: {
   return <Container>
     <Row>
       <Col>
-        <span>{Labels.ChooseGameType}</span>
+        <div>{Labels.ChooseGameType}</div>
         <ButtonGroup className='my-2'>
           <Button
             variant={gameType === GameType.wordle ? 'secondary' : 'outline-secondary'}
