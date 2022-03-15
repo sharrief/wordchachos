@@ -26,13 +26,17 @@ const Home: NextPage = () => {
   /** Changing game type is used to trigger a loading the game from cache. See SWR hook below */
   const [newGameType, setNewGameType] = useState<GameType>();
   /** The fetcher/callback is only fired when the newGameType changes, otherwise SWR returns the cached value from previous call */
-  const { data, error, mutate } = useSWR(['getGame', newGameType], async (_r, gameType) => {
+  const { data, error, mutate } = useSWR(['getGame', newGameType, JSON.stringify(date)], async (_r, gameType) => {
     try {
       /** Try to load from savedGames first */
       const savedGame = getActiveGame(gameType);
       if (savedGame) {
-        if (gameType !== GameType.wordle || (!todaysSeed || todaysSeed === savedGame.seed))
+        if (gameType !== GameType.wordle || (todaysSeed === savedGame.seed))
           return { game: savedGame as Game, error: '' };
+          if (!todaysSeed) {
+            const { data: seed } = await api.getWordleSeed(date);
+            if (seed === savedGame.seed) return { game: savedGame as Game, error: '' };
+          }
       }
       /** No saved games (with todays seed, for wordle...) found for the GameType, so Initialize a new game */
       /** For random games, after the first such call to this SWR, new random games will be started by handleNewRandomGame */
@@ -43,7 +47,6 @@ const Home: NextPage = () => {
       return { error: message as string, game: undefined as unknown as Game }
     }
   });
-  const loading = !data && !error;
   const setGame = (newGame: Game) => {
     /** Save game state to local storage */
     saveActiveGame(newGame);
@@ -53,19 +56,6 @@ const Home: NextPage = () => {
   // const [game, setGame] = useState<Game>(initialGame);
   const game = data?.game || getEmptyGame(newGameType);
   const { state, board, guessLength, guessIndex, squareIndex, type, answer } = game;
-  const notReady = !answer.length;
-  // const handleChangeGameType = async () => {
-  //   if (newGameType != null && newGameType !== type) {
-  //     const { data: newGame, error } = await api.initGame({ gameType: newGameType });
-  //     if (error) { setErrorMsg(error); }
-  //     if (newGame?.board) {
-  //       setGame({ ...newGame });
-  //     }
-  //   }
-  //   setNewGameType(undefined);
-
-  // };
-  // const handleCloseChangeGameType = () => setNewGameType(undefined);
 
   const [newRandomGame, setNewRandomGame] = useState(false);
   const handleNewRandomGame = async () => {
