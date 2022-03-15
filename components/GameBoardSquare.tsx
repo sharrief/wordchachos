@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
-import { KeyState, Square } from "@types";
+import { AnimatePresence, motion } from 'framer-motion';
+import { KeyState, Square } from 'types';
 
 export function GameBoardSquare(props: {
   square: Square
@@ -9,11 +9,11 @@ export function GameBoardSquare(props: {
   const { state, letter } = square;
   const activeClass = active ? ' border-info ' : '';
   const positionClass = state === KeyState.Position ? ' bg-success text-dark' : '';
-  const matchClass = state === KeyState.Match ? ' bg-warning text-dark': '';
-  const wrongClass = state === KeyState.Wrong ? ' bg-dark text-danger': '';
+  const matchClass = state === KeyState.Match ? ' bg-warning text-dark' : '';
+  const wrongClass = state === KeyState.Wrong ? ' bg-dark text-danger' : '';
   const classes = `${activeClass}${positionClass}${matchClass}${wrongClass}`;
   const letterShownAnimation = {
-    scale: [.1, 1],
+    scale: [0.1, 1],
     rotate: [0, 360],
   };
   const letterHideAnimation = {
@@ -31,5 +31,5 @@ export function GameBoardSquare(props: {
       animate={letter ? letterShownAnimation : undefined}
       exit={letterHideAnimation}
     >{letter}</motion.div></AnimatePresence>
-  </div>)
+  </div>);
 }

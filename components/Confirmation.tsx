@@ -1,5 +1,5 @@
-import { Labels } from "@messages";
-import { Button, Modal } from "react-bootstrap";
+import { Labels } from 'messages/labels';
+import { Button, Modal } from 'react-bootstrap';
 
 export function Confirmation(props: {
   show: boolean;
@@ -8,7 +8,9 @@ export function Confirmation(props: {
   cancel: () => void;
   confirm: () => void;
 }) {
-  const { show, message, cancel, confirm } = props;
+  const {
+    show, message, cancel, confirm,
+  } = props;
   return <Modal show={show} centered onHide={cancel}>
     <Modal.Header closeButton>
       <Modal.Title>{Labels.ConfirmationDefaultTitle}</Modal.Title>
@@ -20,5 +22,5 @@ export function Confirmation(props: {
       <Button variant="primary" onClick={cancel}>{Labels.ConfirmationCancel}</Button>
       <Button variant="secondary" onClick={confirm}>{Labels.ConfirmationConfirm}</Button>
     </Modal.Footer>
-  </Modal>
+  </Modal>;
 }

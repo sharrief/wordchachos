@@ -1,8 +1,9 @@
-import { Game } from "@types";
-import { getActiveSquareCoordinates, getSquare } from "game";
+import { Game } from 'types';
+import { getActiveSquareCoordinates } from 'game/board';
+import { getSquare } from 'game/guess';
 
 /**
- * 
+ *
  * @param game The Game state
  * @returns The updated game state, with the previous Square's letter cleared
  */
@@ -15,4 +16,3 @@ export function removeLetter(game: Game): Game {
   }
   return { ...game, ...getActiveSquareCoordinates(board) };
 }
-

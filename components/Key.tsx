@@ -1,7 +1,6 @@
-
-import { KeyState } from '@types';
+import { KeyState } from 'types';
 import React from 'react';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function KeyComponent(props: {
   label: JSX.Element | string;
@@ -12,12 +11,14 @@ function KeyComponent(props: {
   className?: string;
   active?: boolean;
 }) {
-  const { label, value, active, onClick, canPress, guessState, className } = props;
+  const {
+    label, value, active, onClick, canPress, guessState, className,
+  } = props;
   const handleKeyPress = () => {
     onClick(value);
-  }
+  };
   let guessClass = 'bg-primary';
-  if (!value && !canPress) guessClass = 'bg-dark text-primary'
+  if (!value && !canPress) guessClass = 'bg-dark text-primary';
   if (guessState === KeyState.Wrong) guessClass = 'bg-dark text-danger';
   if (guessState === KeyState.Match) guessClass = 'bg-warning text-dark';
   if (guessState === KeyState.Position) guessClass = 'bg-success text-dark';
@@ -32,7 +33,7 @@ function KeyComponent(props: {
       >
         {label}
       </motion.div>
-  )
+  );
 }
 
 export const Key = React.memo(KeyComponent);
