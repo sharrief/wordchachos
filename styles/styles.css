@@ -4,3 +4,7 @@ body, header, footer {
   padding-bottom: env(safe-area-inset-bottom);
   padding-top: env(safe-area-inset-top);
 }
+
+html, body, #__next {
+  height: 100%;
+}

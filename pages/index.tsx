@@ -124,7 +124,7 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
     }, KeyState.Unused as KeyState);
 
   return (
-    <div className='vh-100 d-flex flex-column justify-content-between'>
+    <div className='h-100 d-flex flex-column justify-content-between'>
       <Head>
         <title>Wordchachos</title>
       </Head>
