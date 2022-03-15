@@ -124,11 +124,10 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
     }, KeyState.Unused as KeyState);
 
   return (
-    <div className='vh-100'>
+    <div className='vh-100 d-flex flex-column justify-content-between'>
       <Head>
         <title>Wordchachos</title>
       </Head>
-      <Navigation />
       <Confirmation
         show={newGameType != null}
         message={Labels.ChangeGameType}
@@ -147,6 +146,8 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         onHide={() => setShowEndScreen(false)}
         handleNewRandomGame={handleClickNewGame}
       />
+      <div>
+      <Navigation />
       <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
         <ButtonGroup className='mb-2'>
           <Button
@@ -164,7 +165,8 @@ const Home: NextPage<{ game: Game }> = ({ game: initialGame }) => {
         </ButtonGroup>
         <GameBoard game={game} />
       </Container>
-      <Container className='fixed-bottom '>
+      </div>
+      <Container className=''>
         <AnimatePresence>
           <motion.div
             key={`${busy}`}

@@ -9,11 +9,11 @@ export const Labels = {
       case 3:
         return 'nice!';
       case 4:
-        return 'well done';
+        return 'well done.';
       case 5:
-        return 'you did it';
+        return 'you did it.';
       default:
-        return 'lucky you';
+        return 'lucky you.';
     }
   },
   LossTitle: 'You lose',
