@@ -40,6 +40,7 @@ export const Labels = {
   GuessesUsed: 'Guesses used',
   Statistics: 'Statistics',
   StatisticsSubtitle: 'How you doin?',
+  GameHistory: 'Game history',
   GamesPlayed: 'Played',
   WinPct: 'Win %',
   CurrentStreak: 'Current streak',
