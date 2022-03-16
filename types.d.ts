@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export enum KeyState {
   Unused, Match, Position, Wrong
@@ -39,6 +39,9 @@ export type SimpleDate = {
   year: number;
   month: number;
   day: number;
+}
+export type Version = {
+  version: number;
 }
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]

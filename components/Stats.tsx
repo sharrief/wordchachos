@@ -48,7 +48,7 @@ export function GameStats(props: {
   let maxStreak = 0;
   let wins = 0;
   const guessesUsedByGame = gameHistory
-    .filter((g) => g.type === type)
+    .filter((g) => g.type === type && g.state !== GameState.active)
     .map((g) => {
       const { board, answer, state: s } = g;
       const answerLength = answer.length;

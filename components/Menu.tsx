@@ -9,8 +9,8 @@ import { Game, GameType } from 'types';
 import { useState } from 'react';
 
 // TODO ugh, don't want to add redux, so ill just pass this handler down
-export function Menu(props: { game: Game, seed?: number; setGameType: (gameType: GameType) => void }) {
-  const { game, setGameType } = props;
+export function Menu(props: { game: Game, seed?: number; }) {
+  const { game } = props;
   const [showingStats, setShowingStats] = useState(false);
   const showStats = () => setShowingStats(true);
   const closeStats = () => setShowingStats(false);
@@ -18,9 +18,8 @@ export function Menu(props: { game: Game, seed?: number; setGameType: (gameType:
   const [showingOptions, setShowingOptions] = useState(false);
   const showOptions = () => setShowingOptions(true);
   const closeOptions = () => setShowingOptions(false);
-  const handleSetGameType = (t: GameType) => {
+  const handleSetGameType = () => {
     closeOptions();
-    setGameType(t);
   };
 
   return <><Navbar expand="lg" variant="dark" bg="dark">

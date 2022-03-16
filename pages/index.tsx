@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { SWRConfig } from 'swr';
-import Home from './home';
+import Home from './[gameType]';
 
 const Index: NextPage = () => (
     <SWRConfig

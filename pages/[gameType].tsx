@@ -42,6 +42,7 @@ import { Labels } from 'messages/labels';
 import { Errors } from 'messages/errors';
 import useSWR, { SWRConfig } from 'swr';
 import { DateTime } from 'luxon';
+import { useRouter } from 'next/router';
 
 const Home: NextPage = () => {
   /** SWR will cache the seed using with key seedDate */
@@ -60,30 +61,32 @@ const Home: NextPage = () => {
     // setSeedDate({ year, month, day });
     return data;
   });
+  const router = useRouter();
+  const { gameType: gameRoute } = router.query;
+  const gameType = gameRoute === 'random' ? GameType.random : GameType.wordle;
   /** Changing game type is used to trigger a loading the game from cache. See SWR hook below */
-  const [newGameType, setNewGameType] = useState<GameType>(GameType.wordle);
   /** The fetcher/callback is only fired when the newGameType changes, otherwise SWR returns the cached value from previous call */
   /** SWR won't call the fetcher/callback is the first function throws bc todaysSeed seed is undefined while its SWR is in process*/
   const { data, mutate: mutateGame } = useSWR(() => {
-    if (newGameType === GameType.random) {
+    if (gameType === GameType.random) {
       /** Use the SWR key for the random game type */
-      return [`${newGameType}`, newGameType];
+      return [`${gameType}`, gameType];
     }
     /** No wordle game will be loaded until todays seed is fetched */
     if (todaysSeed == null) throw new Error('Seed not loaded');
     /** Use the SWT key for todays wordle see */
-    return [`${newGameType}-seed-${todaysSeed}`, newGameType];
-  }, async (_r, gameType) => {
+    return [`${gameType}-seed-${todaysSeed}`, gameType];
+  }, async (_r, t) => {
     const log = (msg: string) => console.log(`getGameSWR: ${msg}`);
     try {
       const dt = DateTime.local();
       const { year, month, day } = dt;
       log(`Finding a game for ${month}/${day}/${year}`);
       /** Try to load from savedGames first */
-      const savedGame = getMostRecentGame(gameType);
+      const savedGame = getMostRecentGame(t);
       if (savedGame) {
         log(`Saved game seed is ${savedGame.seed}. Todays is ${todaysSeed}`);
-        if (gameType === GameType.random || (todaysSeed === savedGame.seed)) {
+        if (t === GameType.random || (todaysSeed === savedGame.seed)) {
           log('Returning saved game');
           return { game: savedGame as Game, error: '' };
         }
@@ -92,7 +95,7 @@ const Home: NextPage = () => {
       /** For random games, after the first such call to this SWR, new random games will be started by handleNewRandomGame */
       log(`Starting a new game with seed date ${month}/${day}/${year}`);
       const today = { year, month, day };
-      const { data: game, error } = await api.initGame({ gameType: gameType ?? GameType.wordle, date: today });
+      const { data: game, error } = await api.initGame({ gameType: t ?? GameType.wordle, date: today });
       if (game) {
         log(`Saving the new game with seed ${game.seed}`);
         saveGame(game);
@@ -109,7 +112,7 @@ const Home: NextPage = () => {
     mutateGame();
   };
   // const [game, setGame] = useState<Game>(initialGame);
-  const game = data?.game || getUninitializedGame(newGameType);
+  const game = data?.game || getUninitializedGame(gameType);
   const {
     state, board, guessLength, guessIndex, squareIndex, type,
   } = game;
@@ -117,30 +120,23 @@ const Home: NextPage = () => {
   const [busy, setBusy] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
   const [showEndScreen, setShowEndScreen] = useState(false);
-  const [newRandomGame, setNewRandomGame] = useState(false);
   const handleNewRandomGame = async () => {
     setBusy(true);
-    if (type === GameType.random && newRandomGame === true) {
+    if (gameType === GameType.random) {
       const { year, month, day } = DateTime.local();
       const { data: newGame, error } = await api.initGame({ gameType: GameType.random, date: { year, month, day } });
       if (error) { setErrorMsg(error); }
       if (newGame?.board) {
         setGame({ ...newGame });
       }
-      setNewRandomGame(false);
       setShowEndScreen(false);
     }
     setBusy(false);
   };
-  const handleCloseNewRandomGame = () => setNewRandomGame(false);
 
   const handleClickNewGame = () => {
     setShowEndScreen(false);
-    if (type === GameType.random) {
-      setNewRandomGame(true);
-    } else {
-      setNewGameType(GameType.random);
-    }
+    handleNewRandomGame();
   };
   useEffect(() => {
     if (game.type === GameType.wordle && game.seed !== todaysSeed) {
@@ -206,60 +202,52 @@ const Home: NextPage = () => {
 
   return (
     <SWRConfig
-    value={{
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }}>
+      value={{
+        revalidateIfStale: false,
+        revalidateOnFocus: false,
+        revalidateOnReconnect: false,
+      }}>
       <div className='h-100 d-flex flex-column justify-content-between'>
         <Head>
           <title>{Labels.SiteTitle}</title>
         </Head>
-        <Confirmation
-          show={newRandomGame === true}
-          message={Labels.StartANewGameTitle}
-          cancel={handleCloseNewRandomGame}
-          confirm={handleNewRandomGame}
-        />
         <EndScreen
           show={showEndScreen}
           game={game}
           onHide={() => setShowEndScreen(false)}
           handleNewRandomGame={handleClickNewGame}
         />
+        <div className='fixed-top mt-5'>
+          <AnimatePresence>
+            <motion.div
+              key={errorMsg}
+              style={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: [1, 0] }}
+            >
+              {errorMsg !== '' && <Alert variant='danger' onClose={closeError} dismissible>{errorMsg}</Alert>}
+            </motion.div>
+          </AnimatePresence>
+        </div>
         <div>
-          <Menu game={game} setGameType={setNewGameType} seed={todaysSeed} />
+          <Menu game={game} seed={todaysSeed} />
           <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
             <GameBoard game={game} />
           </Container>
         </div>
-        <Container className=''>
-          <div className='fixed-top mt-5'>
-            <AnimatePresence>
-              <motion.div
-                key={errorMsg}
-                style={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: [1, 0] }}
-              >
-                {errorMsg !== '' && <Alert variant='danger' onClose={closeError} dismissible>{errorMsg}</Alert>}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          <KeyBoard
-            {...{
-              clickedLetter,
-              clickedBackspace,
-              clickedEnter,
-              getLetterGuessState: getKeyGuessState,
-              board,
-              guessIndex,
-              readyToSubmit,
-              canBackspace,
-              busy,
-            }}
-          />
-        </Container>
+        <KeyBoard
+          {...{
+            clickedLetter,
+            clickedBackspace,
+            clickedEnter,
+            getLetterGuessState: getKeyGuessState,
+            board,
+            guessIndex,
+            readyToSubmit,
+            canBackspace,
+            busy,
+          }}
+        />
       </div>
     </SWRConfig>
   );
