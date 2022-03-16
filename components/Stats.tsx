@@ -1,6 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import { Labels } from "@messages";
-import { Game, GameState, SavedGameV1 } from "@types";
+import { Game, GameState } from "@types";
 import { useEffect, useState } from "react";
 import { getSavedGames } from "@game";
 import { Bar } from 'react-chartjs-2';
@@ -34,7 +34,7 @@ export function GameStats(props: {
   const { guessIndex: guesses, type, guessesAllowed, state } = game;
   const gameComplete = state !== GameState.active;
   
-  const [gameHistory, setGameHistory] = useState<SavedGameV1[]>([]);
+  const [gameHistory, setGameHistory] = useState<Game[]>([]);
   useEffect(() => {
     if (show) {
       const history = getSavedGames();
