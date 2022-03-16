@@ -6,7 +6,7 @@ export default function handler<T extends typeof api.getWordleSeed>(req: Req<T>,
   try {
     const { year, month, day } = req.body;
     const seed = getWordleSeed(year, month, day);
-    res.send({ seed: seed });
+    res.send({ data: seed });
   } catch ({ message }) {
     res.send(({ error: message }))
   }

@@ -1,29 +1,19 @@
-import { Game, GameState, GameType, SavedGameV1 } from "@types";
+import { Game } from "@types";
 import { DateTime } from "luxon";
 import { v4 as uuid } from 'uuid';
 
-export const SAVED_GAMES_KEY = 'wordchachos-saved-games';
+export const SAVED_GAMES_KEY_V1 = 'wordchachos-saved-games-v1';
 
 export function saveGame(game: Game) {
-  if (game.state !== GameState.active) {
-    const { guessIndex, squareIndex, guessLength, guessesChecked, ...rest } = game;
-    const gameToSave: SavedGameV1 = rest;
-    const timestamp = DateTime.local().valueOf();
-    const id = uuid();
-    const version = 1;
-    const data = { ...gameToSave, timestamp, id, version }
-    const allGamesString = localStorage.getItem(SAVED_GAMES_KEY);
-    let allGames: SavedGameV1[] = [];
-    if (allGamesString) {
-      const savedGames = JSON.parse(allGamesString) as SavedGameV1[];
-      allGames = [...savedGames];
-      const previousAttempt = savedGames.find(({ seed }) => seed === gameToSave.seed)
-      if (!previousAttempt)
-        allGames = [...savedGames, data];
-    } else {
-      allGames = [data];
-    }
-    localStorage.setItem(`${SAVED_GAMES_KEY}`, JSON.stringify(allGames));
+  const allGamesString = localStorage.getItem(SAVED_GAMES_KEY_V1);
+  let allGames: Game[] = [];
+  if (allGamesString) {
+    const savedGames = JSON.parse(allGamesString) as Game[];
+    const otherGames = savedGames.filter((g) => g.id !== game.id);
+    allGames = [...otherGames, game];
+  } else {
+    allGames = [game];
   }
+  localStorage.setItem(`${SAVED_GAMES_KEY_V1}`, JSON.stringify(allGames));
 }
 

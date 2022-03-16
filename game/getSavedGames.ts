@@ -1,10 +1,10 @@
-import { SavedGameV1 } from "@types";
-import { SAVED_GAMES_KEY } from "./saveGame";
+import { Game } from "@types";
+import { SAVED_GAMES_KEY_V1 } from "./saveGame";
 
 export function getSavedGames() {
-  const allGamesString = localStorage.getItem(SAVED_GAMES_KEY);
+  const allGamesString = localStorage.getItem(SAVED_GAMES_KEY_V1);
   if (allGamesString) {
-    return [...JSON.parse(allGamesString) as SavedGameV1[]];
+    return [...JSON.parse(allGamesString) as Game[]];
   } 
   return [];
 }

@@ -6,3 +6,4 @@ export * from './GameBoard';
 export * from './Menu';
 export * from './Stats';
 export * from './Options';
+export * from './Confirmation';

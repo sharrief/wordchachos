@@ -75,7 +75,6 @@ ${board.filter((_, idx) => idx < guesses)
   return (<Modal show={show} centered onHide={handleOnHide}>
     <Modal.Header closeButton>
       <Modal.Title>
-
       </Modal.Title>
     </Modal.Header>
     <Modal.Body>
@@ -84,7 +83,7 @@ ${board.filter((_, idx) => idx < guesses)
           {win && `${Labels.WinTitle(guesses).toLocaleUpperCase()} ${Labels.WinSubtitle(guesses)}`}
           {loss && `${Labels.LossTitle} ${Labels.LossSubtitle}`}
         </h4>
-        <h5>{Labels.TheAnswerWas} {answer}</h5>
+        <h5>{Labels.TheAnswerWas} {(win||loss) ? answer : ''}</h5>
         <p>{Labels.ShareGameMessage}</p>
         <ButtonGroup>
           <CopyToClipboard

@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 // TODO ugh, don't want to add redux, so ill just pass this handler down
-export function Menu(props: { game: Game, setGameType: (gameType: GameType) => void }) {
-  const { game, setGameType } = props;
+export function Menu(props: { game: Game, seed?: number; setGameType: (gameType: GameType) => void }) {
+  const { game, setGameType, seed } = props;
   const [showingStats, setShowingStats] = useState(false);
   const showStats = () => setShowingStats(true);
   const closeStats = () => setShowingStats(false);
@@ -25,8 +25,15 @@ export function Menu(props: { game: Game, setGameType: (gameType: GameType) => v
     <Container fluid>
       <Row className='w-100 g-0 justify-content-between'>
         <Col xs='2'>
-          <Button variant='link' size='sm' className='text-decoration-none d-flex' onClick={showOptions}><Settings /> {game.type === GameType.wordle ? Labels.GameTypeWordle.toLowerCase() : Labels.GameTypeRandom.toLowerCase()}</Button>
-          
+          <Button 
+          variant='link' 
+          size='sm' 
+          className='text-decoration-none d-flex' 
+          onClick={showOptions}>
+            <Settings /> {game.type === GameType.wordle 
+            ? `${Labels.GameTypeWordle.toLowerCase()} ${seed ?? '...'}`
+            : Labels.GameTypeRandom.toLowerCase()}
+          </Button>
           </Col>
         <Col xs='auto' className="text-center">
           <Navbar.Brand className="m-0">{Labels.SiteTitle.toUpperCase()}</Navbar.Brand>
