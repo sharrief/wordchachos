@@ -30,7 +30,6 @@ export function KeyBoard(props: {
   const thirdRowLetters = 'zxcvbnm';
   const allLetters = `${firstRowLetters}${secondRowLetters}${thirdRowLetters}`;
   const handleKeyPress = (event: KeyboardEvent) => {
-    console.log(event.key);
     if (allLetters.includes(event.key.toLowerCase())) {
       clickedLetter(event.key.toUpperCase());
     }
