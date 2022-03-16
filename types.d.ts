@@ -1,4 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
+/* eslint-disable no-shadow */
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export enum KeyState {
   Unused, Match, Position, Wrong
@@ -39,6 +40,9 @@ export type SimpleDate = {
   year: number;
   month: number;
   day: number;
+}
+export type Version = {
+  version: string;
 }
 export interface Req<B> extends NextApiRequest {
   body: Parameters<B>[0]

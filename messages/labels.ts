@@ -1,5 +1,9 @@
 export const Labels = {
-  SiteTitle: 'wordchachos',
+  SiteTitle: 'wordchachos!',
+  Updating: 'Updating...',
+  NewVersion: 'A new version of the app is ready! Your browser is refreshing to get the update. Just a sec...',
+  CheckingForUpdate: (current: string) => `Current version is v${current}. Checking for update.`,
+  FoundUpdate: (current: string, update: string) => `A new update is ready. v${current} -> v${update}`,
   WinTitle: (guesses: number) => {
     switch (guesses) {
       case 1:
@@ -36,6 +40,7 @@ export const Labels = {
   GuessesUsed: 'Guesses used',
   Statistics: 'Statistics',
   StatisticsSubtitle: 'How you doin?',
+  GameHistory: 'Game history',
   GamesPlayed: 'Played',
   WinPct: 'Win %',
   CurrentStreak: 'Current streak',

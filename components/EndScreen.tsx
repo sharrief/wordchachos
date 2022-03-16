@@ -10,7 +10,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useEffect, useState } from 'react';
 import * as emoji from 'github-emoji';
 import { saveGame } from 'game/saveGame';
-import { GameStats } from 'components/Stats';
+import { Stats } from './Stats';
 
 export function EndScreen(props: {
   show: boolean;
@@ -84,7 +84,7 @@ ${board.filter((_, idx) => idx < guesses)
         </ButtonGroup>
       </Container>
       <hr className="border border-1" />
-      <GameStats show={show} game={game} />
+      <Stats show={show} game={game}/>
     </Modal.Body>
   </Modal>);
 }

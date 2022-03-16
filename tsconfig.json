@@ -8,6 +8,7 @@
       "types": ["types.d"],
       "util/*": ["util/*"],
       "messages/*": ["messages/*"],
+      "version": ["version"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -1,4 +1,6 @@
-import { Game, GameType, SimpleDate } from 'types';
+import {
+  Game, GameType, SimpleDate, Version,
+} from 'types';
 
 function createRequest<T>(postData: T) {
   return {
@@ -58,10 +60,14 @@ function initGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
 function getWordleSeed<B extends SimpleDate>(body: B) {
   return fetchRoute<B, number>('/api/getWordleSeed', body);
 }
+function getVersion() {
+  return fetchRoute<null, Version>('/api/getVersion');
+}
 export const api = {
   addLetter,
   removeLetter,
   submitGuess,
   initGame,
   getWordleSeed,
+  getVersion,
 };

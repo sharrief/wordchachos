@@ -3,14 +3,14 @@ import {
 } from 'react-bootstrap';
 import { Labels } from 'messages/labels';
 import { BarChart, Settings } from '@material-ui/icons';
-import { GameStats } from 'components/Stats';
 import { Options } from 'components/Options';
 import { Game, GameType } from 'types';
 import { useState } from 'react';
+import { Stats } from './Stats';
 
 // TODO ugh, don't want to add redux, so ill just pass this handler down
-export function Menu(props: { game: Game, seed?: number; setGameType: (gameType: GameType) => void }) {
-  const { game, setGameType } = props;
+export function Menu(props: { game: Game, seed?: number; }) {
+  const { game } = props;
   const [showingStats, setShowingStats] = useState(false);
   const showStats = () => setShowingStats(true);
   const closeStats = () => setShowingStats(false);
@@ -18,9 +18,8 @@ export function Menu(props: { game: Game, seed?: number; setGameType: (gameType:
   const [showingOptions, setShowingOptions] = useState(false);
   const showOptions = () => setShowingOptions(true);
   const closeOptions = () => setShowingOptions(false);
-  const handleSetGameType = (t: GameType) => {
+  const handleSetGameType = () => {
     closeOptions();
-    setGameType(t);
   };
 
   return <><Navbar expand="lg" variant="dark" bg="dark">
@@ -49,7 +48,7 @@ export function Menu(props: { game: Game, seed?: number; setGameType: (gameType:
     <Modal show={showingStats} onHide={closeStats} centered>
       <Modal.Header closeButton>{Labels.Statistics.toUpperCase()}: {game.type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom}</Modal.Header>
       <Modal.Body>
-        <GameStats show={showingStats} game={game} />
+        <Stats show={showingStats} game={game} />
       </Modal.Body>
     </Modal>
     <Modal show={showingOptions} onHide={closeOptions} centered>
