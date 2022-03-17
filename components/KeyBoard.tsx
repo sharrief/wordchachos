@@ -1,8 +1,11 @@
-import { CheckCircle, Backspace } from '@material-ui/icons';
+import {
+  CheckCircle, Backspace, Add,
+} from '@material-ui/icons';
 import { Spinner } from 'react-bootstrap';
 import { Key } from 'components/Key';
 import { Board, KeyState } from 'types';
 import { useEffect } from 'react';
+import { Labels } from 'messages/labels';
 
 export function KeyBoard(props: {
   clickedLetter: (letter: string) => void;
@@ -11,6 +14,7 @@ export function KeyBoard(props: {
   getLetterGuessState: (letter: string) => KeyState;
   busy: boolean;
   readyToSubmit: boolean;
+  gameOver: boolean;
   canBackspace: boolean;
   board: Board;
   guessIndex: number;
@@ -21,7 +25,7 @@ export function KeyBoard(props: {
     clickedEnter, busy,
     getLetterGuessState,
     readyToSubmit, canBackspace,
-    board, guessIndex,
+    board, guessIndex, gameOver,
   } = props;
   const guess = board?.[guessIndex]?.squares?.map(({ letter }) => letter) || [];
   const rowClass = 'justify-content-between d-flex mb-2';
@@ -67,8 +71,9 @@ export function KeyBoard(props: {
       <Key
         action='enter'
         actionEnabled={readyToSubmit}
-        label={busy ? <Spinner animation='grow' /> : <CheckCircle />}
-        value={''}
+        // eslint-disable-next-line no-nested-ternary
+        label={busy ? <Spinner animation='grow' /> : gameOver ? <>{Labels.StartANewGameButton} <Add /></> : <CheckCircle />}
+        value={gameOver ? 'new' : ''}
         onClick={clickedEnter} />
       {'ZXCVBNM'.split('').map((key) => <Key
         active={guess.includes(key)}

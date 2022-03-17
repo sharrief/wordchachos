@@ -19,12 +19,14 @@ function KeyComponent(props: {
   if (action) guessClass = 'bg-dark text-primary';
   if (action === 'delete' && actionEnabled) guessClass = 'bg-primary text-light';
   if (action === 'enter' && actionEnabled) guessClass = 'bg-success text-dark';
+  if (action === 'enter' && value === 'new') guessClass = 'bg-secondary text-white';
   if (guessState === KeyState.Wrong) guessClass = 'bg-dark text-danger';
   if (guessState === KeyState.Match) guessClass = 'bg-warning text-dark';
   if (guessState === KeyState.Position) guessClass = 'bg-success text-dark';
   let borderClass = 'border border-2 border-primary';
   if (active) borderClass = 'border border-2 border-info';
   if (actionEnabled && action === 'enter') borderClass = 'border border-2 border-success';
+  if (value === 'new' && action === 'enter') borderClass = 'border border-2 border-info';
   return (
       <motion.button
         name={value}

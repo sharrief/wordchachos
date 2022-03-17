@@ -278,6 +278,7 @@ const Home: NextPage = () => {
           board,
           guessIndex,
           readyToSubmit,
+          gameOver: state !== GameState.active,
           canBackspace,
           busy,
         }}
