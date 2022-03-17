@@ -34,8 +34,14 @@ export function Options(props: {
         </ButtonGroup>
       </Col>
     </Row>
+    <hr className='border border-1 border-white'/>
     <Row>
-      <Button variant='link' href='/privacy' rel='noreferrer' target='_blank'>{Labels.PrivacyPolicy}</Button>
+      <Col>
+        <Button variant='link' href='/privacy' rel='noreferrer' target='_blank'>{Labels.PrivacyPolicy}</Button>
+      </Col>
+      <Col>
+        <Button variant='link' href='http://github.com/sharrief/wordchachos' rel='noreferrer' target='_blank'>{Labels.GitHub}</Button>
+      </Col>
     </Row>
   </Container>;
 }
