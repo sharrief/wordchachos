@@ -1,6 +1,6 @@
 {
   "name": "wordchachos",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": "false",
   "scripts": {
     "dev": "next dev",
@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "@types/luxon": "^2.3.0",
-    "@types/node": "17.0.21",
     "@types/react": "17.0.40",
     "@types/react-copy-to-clipboard": "^5.0.2",
     "@types/uuid": "^8.3.4",
