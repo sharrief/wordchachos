@@ -22,7 +22,7 @@ export function GameStats(props: {
     }
   }, [show]);
   const {
-    played, wins, currentStreak, maxStreak, guessesSaved,
+    played, currentStreak, maxStreak, guessesSaved,
   } = gameHistory
     .filter((g) => g.type === type && g.state !== GameState.active)
     .reduce((stats, g) => {
@@ -53,7 +53,6 @@ export function GameStats(props: {
       maxStreak: 0,
       guessesSaved: 0,
     });
-  const winPct = Math.floor((wins / (played || 1)) * 100);
 
   return (
     <Container>

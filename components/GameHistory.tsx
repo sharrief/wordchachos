@@ -7,9 +7,6 @@ import { useEffect, useState } from 'react';
 import { getSavedGames } from 'game/getSavedGames';
 import { getGuessesUsed } from 'game/board';
 import { DateTime } from 'luxon';
-import {
-  Remove, Star, StarBorder, Whatshot,
-} from '@material-ui/icons';
 import { GameStars } from './GuessStars';
 import { GameStreak } from './GuessStreak';
 
