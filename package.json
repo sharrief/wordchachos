@@ -1,7 +1,12 @@
 {
   "name": "wordchachos",
   "version": "1.2.0",
-  "private": "false",
+  "homepage": "https://wordchachos.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharrief/wordchachos/"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

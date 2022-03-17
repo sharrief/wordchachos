@@ -34,5 +34,8 @@ export function Options(props: {
         </ButtonGroup>
       </Col>
     </Row>
+    <Row>
+      <Button variant='link' href='/privacy' rel='noreferrer' target='_blank'>{Labels.PrivacyPolicy}</Button>
+    </Row>
   </Container>;
 }
