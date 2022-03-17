@@ -43,18 +43,19 @@ export function GuessChart(props: {
     }
   }, [show]);
   const guessesUsedByGame = gameHistory
-    .filter((g) => g.type === type && g.state === GameState.win)
+    .filter((g) => g.type === type)
     .map((g) => {
-      const { board } = g;
+      const { board, state: s } = g;
+      if (s === GameState.loss) return guessesAllowed + 1;
       const guessesUsed = getGuessesUsed(board);
       return guessesUsed;
     });
   const sumByGuessesUsed = guessesUsedByGame.reduce((acc, guessesUsed) => ({ ...acc, [guessesUsed]: (acc[guessesUsed] ?? 0) + 1 }), {} as { [guessesUsed: number]: number });
-  const guessesUsedDataArray = [...Array(guessesAllowed)].map((_, idx) => sumByGuessesUsed[idx + 1] ?? 0);
+  const guessesUsedDataArray = [...Array(guessesAllowed + 1)].map((_, idx) => sumByGuessesUsed[idx + 1] ?? 0);
   // TODO investigate type options with datalabels
   // eslint-disable-next-line
   const dataSet: any = {
-    labels: [1, 2, 3, 4, 5, 6],
+    labels: ['1', '2', '3', '4', '5', '6', '-'],
     datasets: [
       {
         label: Labels.GuessesUsed,
@@ -71,7 +72,10 @@ export function GuessChart(props: {
           display(context: Context) {
             return context.dataset.data[context.dataIndex]; // display labels with an odd index
           },
-          color: '#fff',
+          color: (context: Context) => {
+            const guessNumber = context.dataIndex + 1;
+            return (gameComplete && guessNumber === guesses) ? '#000' : '#fff';
+          },
           anchor: 'end',
           align: 'start',
           font: {
@@ -93,7 +97,19 @@ export function GuessChart(props: {
     indexAxis: 'y',
     scales: {
       x: {
-        display: false,
+        title: {
+          display: true,
+          text: Labels.GamesPlayed,
+          color: '#fff',
+        },
+        grid: {
+          drawTicks: false,
+          color: '#fff',
+        },
+        ticks: {
+          display: false,
+          color: '#fff',
+        },
       },
       y: {
         min: 0,
@@ -102,8 +118,13 @@ export function GuessChart(props: {
         grid: {
           lineWidth: 0,
         },
+        title: {
+          display: true,
+          text: Labels.GuessesUsed,
+          color: '#fff',
+        },
         ticks: {
-          color: '#3cf281',
+          color: '#fff',
         },
       },
     },
@@ -116,7 +137,7 @@ export function GuessChart(props: {
   };
 
   return <>
-    <div className="text-center mt-4"><h5 className='text-success'>{Labels.GuessDistribution.toUpperCase()}</h5></div>
+    <div className="text-center mt-4"><h5>{Labels.GuessDistribution}</h5></div>
     <Bar options={options} data={dataSet} />
   </>;
 }

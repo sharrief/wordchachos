@@ -7,9 +7,8 @@ import { useEffect, useState } from 'react';
 import { getSavedGames } from 'game/getSavedGames';
 import { getGuessesUsed } from 'game/board';
 import { DateTime } from 'luxon';
-import {
-  Done, Remove,
-} from '@material-ui/icons';
+import { GameStars } from './GuessStars';
+import { GameStreak } from './GuessStreak';
 
 export function GameHistory(props: {
   show: boolean;
@@ -25,6 +24,7 @@ export function GameHistory(props: {
       if (history?.length) { setGameHistory(history); }
     }
   }, [show]);
+  let streak = 0;
   const games = gameHistory
     .filter((g) => g.type === type && g.state !== GameState.active)
     .map((g) => {
@@ -51,9 +51,13 @@ export function GameHistory(props: {
         return letters;
       }, {} as { [key: string]: Square });
       const answerSquares = g.answer.split('').map((l) => lettersMatched[l] || { state: KeyState.Unused, letter: l });
-
+      if (g.state === GameState.win) {
+        streak += 1;
+      } else {
+        streak = 0;
+      }
       return {
-        ...g, guessesUsed, gameDate, answerSquares,
+        ...g, guessesUsed, gameDate, answerSquares, streak,
       };
     });
 
@@ -64,20 +68,24 @@ export function GameHistory(props: {
           <h5>{Labels.GameHistory}</h5>
         </Col></Row>
         {games.map(({
-          id, gameDate, guessesUsed, guessesAllowed, answerSquares, state,
+          id, gameDate, guessesUsed, guessesAllowed, answerSquares, state, streak: s,
         }) => (
           <Row key={id} className='justify-content-center'>
             <Col className='text-center'>{gameDate}</Col>
-            <Col className='d-flex justify-content-center align-items-center'>
-              {state === GameState.win ? <><Done /> {guessesUsed}/{guessesAllowed}</> : <Remove />}
+            <Col className='justify-content-center align-items-center'>
+              <GameStars guessesAllowed={guessesAllowed} guessesUsed={guessesUsed} state={state} />
             </Col>
-            <Col className='text-center'>{answerSquares.map((a, i) => (
-              <span key={i} className={
-                // eslint-disable-next-line no-nested-ternary
-                a.state === KeyState.Position ? 'text-success'
-                  : a.state === KeyState.Match ? 'text-warning'
-                    : 'text-dark'}>{a.letter}</span>
-            ))}</Col>
+            <Col className='d-flex justify-content-center align-items-center'>
+              <div className='col-6'><GameStreak streak={s}/>  </div>
+              <div className='col-6'>{answerSquares.map((a, i) => (
+                <span key={i} className={
+                  // eslint-disable-next-line no-nested-ternary
+                  a.state === KeyState.Position ? 'text-success'
+                    : a.state === KeyState.Match ? 'text-warning'
+                      : 'text-dark'}>{a.letter}</span>
+              ))}
+              </div>
+            </Col>
           </Row>
         ))}
       </Container>
