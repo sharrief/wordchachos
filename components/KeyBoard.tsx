@@ -1,9 +1,11 @@
 import {
-  CheckCircle, Backspace, Add,
+  CheckCircle, Backspace, AddCircle,
 } from '@material-ui/icons';
 import { Spinner } from 'react-bootstrap';
 import { Key } from 'components/Key';
-import { Board, KeyState } from 'types';
+import {
+  Game, GameState, GameType, KeyState,
+} from 'types';
 import { useEffect } from 'react';
 import { Labels } from 'messages/labels';
 
@@ -13,20 +15,21 @@ export function KeyBoard(props: {
   clickedEnter: () => void;
   getLetterGuessState: (letter: string) => KeyState;
   busy: boolean;
-  readyToSubmit: boolean;
-  gameOver: boolean;
-  canBackspace: boolean;
-  board: Board;
-  guessIndex: number;
+  game: Game;
 }) {
   const {
     clickedLetter,
     clickedBackspace,
     clickedEnter, busy,
-    getLetterGuessState,
-    readyToSubmit, canBackspace,
-    board, guessIndex, gameOver,
+    game, getLetterGuessState,
   } = props;
+  const {
+    board, guessIndex, squareIndex, guessLength, state, type,
+  } = game;
+  const readyToSubmit = (squareIndex === guessLength);
+  const canBackspace = squareIndex > 0;
+  const gameOver = state !== GameState.active;
+  const canNewGame = gameOver && type === GameType.random;
   const guess = board?.[guessIndex]?.squares?.map(({ letter }) => letter) || [];
   const rowClass = 'justify-content-between d-flex mb-2';
   const firstRowLetters = 'qwertyuiop';
@@ -70,10 +73,13 @@ export function KeyBoard(props: {
     <div className={rowClass}>
       <Key
         action='enter'
-        actionEnabled={readyToSubmit}
+        actionEnabled={readyToSubmit || gameOver}
         // eslint-disable-next-line no-nested-ternary
-        label={busy ? <Spinner animation='grow' /> : gameOver ? <>{Labels.StartANewGameButton} <Add /></> : <CheckCircle />}
-        value={gameOver ? 'new' : ''}
+        label={busy
+          ? <Spinner animation='grow' />
+          : canNewGame ? <><span className='d-none d-md-flex me-1'>{Labels.StartANewGameButton}</span><AddCircle /></>
+            : <CheckCircle />}
+        value={canNewGame ? 'new' : ''}
         onClick={clickedEnter} />
       {'ZXCVBNM'.split('').map((key) => <Key
         active={guess.includes(key)}

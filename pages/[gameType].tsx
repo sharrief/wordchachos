@@ -135,7 +135,7 @@ const Home: NextPage = () => {
   // const [game, setGame] = useState<Game>(initialGame);
   const game = data?.game || getUninitializedGame(gameType);
   const {
-    state, board, guessLength, guessIndex, squareIndex,
+    state, board, guessIndex,
   } = game;
 
   const [busy, setBusy] = useState(false);
@@ -164,14 +164,10 @@ const Home: NextPage = () => {
       setShowEndScreen(false);
     }
   }, [game, todaysSeed]);
-  const win = state === GameState.win;
-  const loss = state === GameState.loss;
   useEffect(() => {
-    if (win || loss) { setShowEndScreen(true); }
-  }, [win, loss]);
+    if (state && state !== GameState.active) { setShowEndScreen(true); }
+  }, [state]);
 
-  const readyToSubmit = (squareIndex === guessLength || win || loss);
-  const canBackspace = squareIndex > 0;
   useEffect(() => {
     if (errorMsg) {
       setTimeout(() => setErrorMsg(''), 1000);
@@ -202,7 +198,7 @@ const Home: NextPage = () => {
   const clickedEnter = async () => {
     if (state !== GameState.active) {
       setShowEndScreen(true);
-    } else if (!busy && readyToSubmit) {
+    } else if (!busy && game.squareIndex === game.guessLength) {
       setBusy(true);
       const res = await api.submitGuess({ game });
       handleResponse(res);
@@ -275,11 +271,7 @@ const Home: NextPage = () => {
           clickedBackspace,
           clickedEnter,
           getLetterGuessState: getKeyGuessState,
-          board,
-          guessIndex,
-          readyToSubmit,
-          gameOver: state !== GameState.active,
-          canBackspace,
+          game,
           busy,
         }}
       />

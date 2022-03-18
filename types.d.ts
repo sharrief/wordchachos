@@ -52,3 +52,9 @@ export interface Res<D> extends NextApiResponse {
   error: string
   data: ReturnType<D>
 }
+
+export type User = {
+  name: string;
+  code: string;
+  fancy?: string;
+}
