@@ -4,7 +4,8 @@ import { Game, GameState } from 'types';
 import { useEffect, useState } from 'react';
 import { getSavedGames } from 'game/getSavedGames';
 import { getGuessesUsed } from 'game/board';
-import { Star } from '@material-ui/icons';
+import { getScore } from 'game/getScore';
+import { shortNumber } from 'utils/shortNumber';
 import { GameStreak } from './GuessStreak';
 
 export function GameStats(props: {
@@ -22,7 +23,7 @@ export function GameStats(props: {
     }
   }, [show]);
   const {
-    played, currentStreak, maxStreak, guessesSaved,
+    played, currentStreak, maxStreak, score,
   } = gameHistory
     .filter((g) => g.type === type && g.state !== GameState.active)
     .reduce((stats, g) => {
@@ -30,10 +31,10 @@ export function GameStats(props: {
       let w = stats.wins;
       let c = stats.currentStreak;
       let x = stats.maxStreak;
-      let a = stats.guessesSaved;
+      let a = stats.score;
       const { state: s } = g;
-      a += g.guessesAllowed - getGuessesUsed(g.board);
       p += 1;
+      a += getScore(getGuessesUsed(g.board));
       if (s === GameState.win) {
         c += 1;
         w += 1;
@@ -44,14 +45,14 @@ export function GameStats(props: {
         c = 0;
       }
       return {
-        wins: w, played: p, currentStreak: c, maxStreak: x, guessesSaved: a,
+        wins: w, played: p, currentStreak: c, maxStreak: x, score: a,
       };
     }, {
       played: 0,
       wins: 0,
       currentStreak: 0,
       maxStreak: 0,
-      guessesSaved: 0,
+      score: 0,
     });
 
   return (
@@ -66,8 +67,7 @@ export function GameStats(props: {
         </Col>
         <Col className='d-flex flex-column align-items-center'>
           <div className='d-flex align-items-center justify-content-center'>
-            <div style={{ transform: 'scale(1.3)' }}><Star /></div>
-            <div className='fs-3'>x{guessesSaved}</div>
+            <div className='fs-3'>{shortNumber(score)}</div>
           </div>
           <div className='text-center'>{Labels.GuessesSaved}</div>
         </Col>

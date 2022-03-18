@@ -8,6 +8,11 @@ const nextConfig = {
         destination: '/wordle',
         permanent: true,
       },
+      {
+        source: '/privacy',
+        destination: '/privacy.html',
+        permanent: true,
+      },
     ];
   },
 };

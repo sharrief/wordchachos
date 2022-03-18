@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="51.980751mm"
+   height="65.059639mm"
+   viewBox="0 0 51.980751 65.059639"
+   version="1.1"
+   id="svg1210"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   sodipodi:docname="gold.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1212"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.77771465"
+     inkscape:cx="17.358552"
+     inkscape:cy="387.67432"
+     inkscape:window-width="1312"
+     inkscape:window-height="1081"
+     inkscape:window-x="672"
+     inkscape:window-y="184"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1207">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath91">
+      <path
+         d="m 336.637,1727.22 60.234,-7.12 25.965,54.82 58.746,-15.08 33.035,50.87 56.215,-22.78 39.523,46.01 52.676,-30.07 45.301,40.34 48.199,-36.83 50.274,33.94 42.859,-42.92 54.348,26.93 36.758,-48.24 57.453,19.45 29.997,-52.72 59.53,11.62 22.71,-56.25 60.55,3.58 15.01,-58.77 60.48,-4.52 7.04,-60.25 59.34,-12.54 -1.05,-60.65 57.14,-20.34 -9.12,-59.97 53.92,-27.77 -17.04,-58.22 49.73,-34.71 -24.64,-55.42 44.66,-41.04 -31.81,-51.64 38.8,-46.63 -38.41,-46.94 32.24,-51.38 -44.33,-41.398 25.1,-55.223 -49.45,-35.117 17.52,-58.07 -53.69,-28.231 9.62,-59.882 -56.97,-20.821 1.55,-60.629 -59.23,-13.027 -6.55,-60.312 -60.44,-5.02 -14.52,-58.891 -60.58,3.082 -22.24,-56.429 -59.63,11.129 -29.56,-52.969 -57.615,18.976 -36.355,-48.546 -54.571,26.48 -42.504,-43.273 -50.55,33.523 -47.895,-37.211 -45.633,39.949 -52.425,-30.5 -39.903,45.692 -56.023,-23.25 -33.453,50.597 -58.621,-15.57 -26.414,54.602 -60.176,-7.61 -18.899,57.629 -60.652,0.481 -11.047,59.64 -60.047,8.551 -3,60.578 -58.375,16.481 5.102,60.441 -55.6526,24.117 13.1094,59.223 -51.9414,31.32 20.8867,56.938 -47.3086,37.961 28.293,53.649 -41.82425,43.93 35.19145,49.4 L 0,1153.49 l 41.4609,44.27 -28.7343,53.41 46.9922,38.35 -21.3555,56.77 51.6836,31.75 -13.5977,59.11 55.4528,24.57 -5.601,60.4 58.234,16.96 2.5,60.6 59.977,9.05 10.558,59.73 60.645,0.97 z"
+         id="path89" />
+    </clipPath>
+    <radialGradient
+       fx="0"
+       fy="0"
+       cx="0"
+       cy="0"
+       r="1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(736.89,0,0,-736.89,736.735,1107.16)"
+       spreadMethod="pad"
+       id="radialGradient99">
+      <stop
+         style="stop-opacity:1;stop-color:#3b3d41"
+         offset="0"
+         id="stop93" />
+      <stop
+         style="stop-opacity:1;stop-color:#3b3d41"
+         offset="0.339024"
+         id="stop95" />
+      <stop
+         style="stop-opacity:1;stop-color:#171518"
+         offset="1"
+         id="stop97" />
+    </radialGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-87.298285,-50.140285)">
+    <path
+       d="m 121.02839,115.16492 -5.90462,-1.48553 c -1.14363,-0.28787 -2.36279,-0.28787 -3.50657,0 l -5.90448,1.48553 c -0.6259,0.15737 -1.25578,-0.23565 -1.25578,-0.78383 V 94.48414 h 17.82727 v 19.89695 c 0,0.54818 -0.62992,0.9412 -1.25582,0.78383"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path19"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 121.3485,94.59632 v 0.45226"
+       style="fill:none;stroke:#fff9fa;stroke-width:0.197497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path21"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 121.3485,95.93963 v 18.44146 c 0,0.0303 -0.0379,0.0339 -0.0383,0.0339 -0.004,0 -0.008,-6.9e-4 -0.0131,-0.002 l -5.90447,-1.48553 c -0.65649,-0.1655 -1.33685,-0.24901 -2.02213,-0.24901 -0.68516,0 -1.36563,0.0835 -2.02201,0.24901 l -5.90462,1.48553 c -0.005,0.001 -0.01,0.002 -0.0132,0.002 -0.0103,0 -0.0211,-0.006 -0.0273,-0.0109 -0.009,-0.007 -0.0109,-0.0135 -0.0109,-0.023 V 95.4941"
+       style="fill:none;stroke:#fff9fa;stroke-width:0.197497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:0.972869, 0.972869;stroke-dashoffset:0;stroke-opacity:1"
+       id="path23"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="M 105.39247,95.04858 V 94.59632"
+       style="fill:none;stroke:#fff9fa;stroke-width:0.197497;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path25"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g85"
+       transform="matrix(0.03527778,0,0,-0.03527778,87.298285,115.19992)"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <g
+         id="g87"
+         clip-path="url(#clipPath91)">
+        <path
+           d="m 336.637,1727.22 60.234,-7.12 25.965,54.82 58.746,-15.08 33.035,50.87 56.215,-22.78 39.523,46.01 52.676,-30.07 45.301,40.34 48.199,-36.83 50.274,33.94 42.859,-42.92 54.348,26.93 36.758,-48.24 57.453,19.45 29.997,-52.72 59.53,11.62 22.71,-56.25 60.55,3.58 15.01,-58.77 60.48,-4.52 7.04,-60.25 59.34,-12.54 -1.05,-60.65 57.14,-20.34 -9.12,-59.97 53.92,-27.77 -17.04,-58.22 49.73,-34.71 -24.64,-55.42 44.66,-41.04 -31.81,-51.64 38.8,-46.63 -38.41,-46.94 32.24,-51.38 -44.33,-41.398 25.1,-55.223 -49.45,-35.117 17.52,-58.07 -53.69,-28.231 9.62,-59.882 -56.97,-20.821 1.55,-60.629 -59.23,-13.027 -6.55,-60.312 -60.44,-5.02 -14.52,-58.891 -60.58,3.082 -22.24,-56.429 -59.63,11.129 -29.56,-52.969 -57.615,18.976 -36.355,-48.546 -54.571,26.48 -42.504,-43.273 -50.55,33.523 -47.895,-37.211 -45.633,39.949 -52.425,-30.5 -39.903,45.692 -56.023,-23.25 -33.453,50.597 -58.621,-15.57 -26.414,54.602 -60.176,-7.61 -18.899,57.629 -60.652,0.481 -11.047,59.64 -60.047,8.551 -3,60.578 -58.375,16.481 5.102,60.441 -55.6526,24.117 13.1094,59.223 -51.9414,31.32 20.8867,56.938 -47.3086,37.961 28.293,53.649 -41.82425,43.93 35.19145,49.4 L 0,1153.49 l 41.4609,44.27 -28.7343,53.41 46.9922,38.35 -21.3555,56.77 51.6836,31.75 -13.5977,59.11 55.4528,24.57 -5.601,60.4 58.234,16.96 2.5,60.6 59.977,9.05 10.558,59.73 60.645,0.97 18.422,57.79"
+           style="fill:url(#radialGradient99);fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="path101" />
+      </g>
+    </g>
+    <path
+       d="m 122.71083,62.85263 v 2.55764"
+       style="fill:none;stroke:#f1db3e;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path229"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 121.43215,64.13145 h 2.5575"
+       style="fill:none;stroke:#f1db3e;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path231"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 102.31106,67.37242 1.80838,1.80834"
+       style="fill:none;stroke:#f1db3e;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path233"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 102.31106,69.18076 1.80838,-1.80834"
+       style="fill:none;stroke:#f1db3e;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path235"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 106.42491,60.29499 c 0,-0.87665 0.71064,-1.5875 1.5875,-1.5875 0.87669,0 1.5875,0.71085 1.5875,1.5875 0,0.87666 -0.71081,1.5875 -1.5875,1.5875 -0.87686,0 -1.5875,-0.71084 -1.5875,-1.5875 z"
+       style="fill:none;stroke:#f1db3e;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path259"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 117.57008,70.82753 8.85479,1.68169 -6.28696,6.4583 1.13672,8.94119 -8.08478,-3.98364 -8.1522,3.84429 1.2901,-8.92037 -6.17512,-6.56519 8.88213,-1.52965 4.33575,-7.90152 4.19957,7.9749"
+       style="fill:#f1db3e;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path295"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 113.37051,62.85263 -4.33575,7.90152 4.25386,5.38762 z"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path297"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 100.15263,72.2838 6.17512,6.56519 6.96087,-2.70722 z"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path299"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 105.03765,87.76936 8.1522,-3.84429 0.0988,-7.7833 z"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path301"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 121.27463,87.90871 -7.98601,-11.76694 6.84929,2.82575 z"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path303"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       d="m 117.57008,70.82753 -4.28146,5.31424 13.13625,-3.63255 z"
+       style="fill:#fab423;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0352778"
+       id="path305"
+       inkscape:export-filename="/Users/sharrief/Desktop/gold.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

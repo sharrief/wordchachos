@@ -1,5 +1,7 @@
 export const Labels = {
   SiteTitle: 'wordchachos!',
+  PrivacyPolicy: 'Privacy policy',
+  GitHub: 'Github',
   SignIn: 'Sign in to WORDCHACHOS!',
   SignInFor: 'Sign in to keep track of your games across devices and compete with your friends!',
   Name: 'Cool name',

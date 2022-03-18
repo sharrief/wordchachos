@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import * as emoji from 'github-emoji';
 import { saveGame } from 'game/saveGame';
 import { getGuessesUsed } from 'game/board';
+import { getScore } from 'game/getScore';
 import { Stats } from './Stats';
 import { GameStars } from './GuessStars';
 
@@ -31,6 +32,7 @@ export function EndScreen(props: {
   const {
     board, state, guessIndex: guesses, answer, type, seed, guessesAllowed,
   } = game;
+  const guessesUsed = getGuessesUsed(board);
   const win = state === GameState.win;
   const loss = state === GameState.loss;
   const gameResult = `${type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom} ${seed ?? ''} ${guesses}/${guessesAllowed}
@@ -68,7 +70,8 @@ ${board.filter((_, idx) => idx < guesses)
           {loss && `${Labels.LossSubtitle}`}
         </div>
         <div className='fs-5'>{Labels.TheAnswerWas} {(win || loss) ? <span className='text-warning'>{answer}</span> : ''}</div>
-        <div className='my-3' style={{ transform: 'scale(1.5)' }}><GameStars {...{ state, guessesAllowed, guessesUsed: getGuessesUsed(board) }} /></div>
+        <GameStars guessesAllowed={guessesAllowed} guessesUsed={guessesUsed} size='lg' />
+        <div className='fs-3'>+{getScore(guessesUsed)}</div>
         <p>{Labels.ShareGameMessage}</p>
         <ButtonGroup>
           <CopyToClipboard
