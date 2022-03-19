@@ -69,7 +69,12 @@ ${board.filter((_, idx) => idx < guesses)
           {win && `${Labels.WinSubtitle(guesses)}`}
           {loss && `${Labels.LossSubtitle}`}
         </div>
-        <div className='fs-5'>{Labels.TheAnswerWas} {(win || loss) ? <span className='text-warning'>{answer}</span> : ''}</div>
+        {answer && <div className='fs-5'>{Labels.TheAnswerWas} {(win || loss)
+          ? <a
+        href={`https://www.merriam-webster.com/dictionary/${answer}`}
+        className='text-warning'
+        rel="noreferrer"
+        target='_blank'>{answer}</a> : ''}</div>}
         <GameStars guessesAllowed={guessesAllowed} guessesUsed={guessesUsed} size='lg' />
         <div className='fs-3'>+{getScore(guessesUsed)}</div>
         <p>{Labels.ShareGameMessage}</p>
