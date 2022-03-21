@@ -23,7 +23,7 @@ export function GameStats(props: {
     }
   }, [show]);
   const {
-    played, currentStreak, maxStreak, score,
+    played, currentStreak, maxStreak, score, guesses,
   } = gameHistory
     .filter((g) => g.type === type && g.state !== GameState.active)
     .reduce((stats, g) => {
@@ -32,7 +32,9 @@ export function GameStats(props: {
       let c = stats.currentStreak;
       let x = stats.maxStreak;
       let a = stats.score;
-      const { state: s } = g;
+      let j = stats.guesses;
+      const { state: s, guessIndex } = g;
+      j += guessIndex;
       p += 1;
       a += getScore(getGuessesUsed(g.board));
       if (s === GameState.win) {
@@ -45,7 +47,7 @@ export function GameStats(props: {
         c = 0;
       }
       return {
-        wins: w, played: p, currentStreak: c, maxStreak: x, score: a,
+        wins: w, played: p, currentStreak: c, maxStreak: x, score: a, guesses: j,
       };
     }, {
       played: 0,
@@ -53,24 +55,45 @@ export function GameStats(props: {
       currentStreak: 0,
       maxStreak: 0,
       score: 0,
+      guesses: 0,
     });
+  const ppg = score / played;
+  const [showPPG, setShowPPG] = useState(false);
+  const toggleShowPPG = () => setShowPPG(!showPPG);
 
+  const avgGuesses = guesses / played;
+  const [showAvgGuesses, setShowAvgGuesses] = useState(false);
+  const toggleShowAvgGuesses = () => setShowAvgGuesses(!showAvgGuesses);
   return (
     <Container>
       <Row><Col className='d-flex flex-column align-items-center'>
         <h5>{Labels.StatisticsSubtitle}</h5>
       </Col></Row>
       <Row>
-        <Col className='d-flex flex-column align-items-center'>
-          <Row><span className='fs-3'>{played}</span></Row>
-          <div className='text-center'>{Labels.GamesPlayed}</div>
+        <Col className='d-flex flex-column align-items-center' onClick={toggleShowAvgGuesses}>
+          {showAvgGuesses
+            ? <>
+              <span className='fs-3'>{Math.floor(avgGuesses * 100) / 100}</span>
+              <div className='text-center'>{Labels.GPG}</div>
+            </>
+            : <>
+              <span className='fs-3'>{played}</span>
+              <div className='text-center'>{Labels.GamesPlayed}</div>
+            </>}
         </Col>
-        <Col className='d-flex flex-column align-items-center'>
-          <div className='d-flex align-items-center justify-content-center'>
-            <div className='fs-3'>{shortNumber(score)}</div>
-          </div>
-          <div className='text-center'>{Labels.GuessesSaved}</div>
-        </Col>
+        <Col className='d-flex flex-column align-items-center' onClick={toggleShowPPG}>
+          {showPPG ? <>
+            <div className='d-flex align-items-center justify-content-center'>
+              <div className='fs-3'>{shortNumber(ppg)}</div>
+            </div>
+            <div className='text-center'>{Labels.PPG}</div>
+          </>
+            : <><div className='d-flex align-items-center justify-content-center'>
+              <div className='fs-3'>{shortNumber(score)}</div>
+            </div>
+              <div className='text-center'>{Labels.GuessesSaved}</div>
+            </>
+          } </Col>
         <Col className='d-flex flex-column align-items-center'>
           <Row>
             <span className='fs-3'><GameStreak streak={currentStreak} /></span>
@@ -82,6 +105,6 @@ export function GameStats(props: {
           <div className='text-center'>{Labels.MaxStreak}</div>
         </Col>
       </Row>
-    </Container>
+    </Container >
   );
 }

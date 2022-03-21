@@ -1,0 +1,1348 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+use('wordchachos');
+// const reef = db.users.findOne({ name: 'reef' })
+// db.games.find({ user_id: reef.id })
+db.users.drop();
+// db.users.insertOne({
+//   "id": "asd",
+//   "name": "sharrief",
+//   "code": "1234"
+// })
+db.games.drop();
+// db.games.insertMany([{
+//   "board": [
+//     {
+//       "checked": true,
+//       "squares": [
+//         {
+//           "letter": "L",
+//           "state": 0
+//         },
+//         {
+//           "letter": "Y",
+//           "state": 0
+//         },
+//         {
+//           "letter": "N",
+//           "state": 0
+//         },
+//         {
+//           "letter": "C",
+//           "state": 0
+//         },
+//         {
+//           "letter": "H",
+//           "state": 0
+//         }
+//       ]
+//     },
+//     {
+//       "checked": false,
+//       "squares": [
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         }
+//       ]
+//     },
+//     {
+//       "checked": false,
+//       "squares": [
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         }
+//       ]
+//     },
+//     {
+//       "checked": false,
+//       "squares": [
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         }
+//       ]
+//     },
+//     {
+//       "checked": false,
+//       "squares": [
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         }
+//       ]
+//     },
+//     {
+//       "checked": false,
+//       "squares": [
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         },
+//         {
+//           "letter": "",
+//           "state": 0
+//         }
+//       ]
+//     }
+//   ],
+//   "guessIndex": 1,
+//   "squareIndex": 0,
+//   "guessesAllowed": 6,
+//   "guessLength": 5,
+//   "answer": "LYNCH",
+//   "seed": 274,
+//   "guessesChecked": true,
+//   "state": 2,
+//   "type": 0,
+//   "id": "58f01a9c-c052-4ce1-b2fb-57ff9148ced8",
+//   "timestamp": 1647708771690,
+//   "version": 1,
+//   "user_id": "asd"
+// }],{
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "R",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "L",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "Y",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "N",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "C",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 2,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "",
+//     "seed": 274,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 0,
+//     "id": "beacae26-7c30-43d2-9839-eebca4b24913",
+//     "timestamp": 1647648507963,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "_id": "623525c773d77c569f7881b2",
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "R",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "M",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "O",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "V",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "I",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "L",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "Y",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "N",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "C",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "L",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "Y",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "N",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "C",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 3,
+//     "squareIndex": 5,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "LYNCH",
+//     "seed": 274,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 0,
+//     "id": "a7f9e0e5-68db-4a06-8653-5e7b9a4cd45b",
+//     "timestamp": 1647649742438,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "R",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "C",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "C",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "I",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 2,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "CACTI",
+//     "seed": 1642,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "545d2228-9d69-413b-a537-99c12ba44868",
+//     "timestamp": 1647708988959,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "_id": "62360baa1bf92a23cd8835ca",
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "H",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "Y",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "N",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 1,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "HYENA",
+//     "seed": 1832,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "57939df2-d448-4af8-8632-bd9aad50a17f",
+//     "timestamp": 1647709098495,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "_id": "62360c2f1bf92a23cd8835cb",
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "R",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "T",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "O",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "U",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "C",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "T",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "O",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "U",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "G",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 3,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "TOUGH",
+//     "seed": 591,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "90a82209-ebab-410f-8995-92d01ca1a10c",
+//     "timestamp": 1647709231528,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "_id": "62360d801bf92a23cd8835cc",
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "R",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "C",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "H",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "M",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "P",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "U",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "M",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "M",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "I",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "B",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "L",
+//                     "state": 1
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "N",
+//                     "state": 3
+//                 },
+//                 {
+//                     "letter": "K",
+//                     "state": 3
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "Q",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "U",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "L",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "M",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 5,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "QUALM",
+//     "seed": 751,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "3b848bd1-3b2b-4f48-b37f-8a54b8329b26",
+//     "timestamp": 1647709568200,
+//     "version": 1,
+//     "user_id": "asd"
+// },{
+//     "_id": "62360af61bf92a23cd8835c8",
+//     "board": [
+//         {
+//             "checked": true,
+//             "squares": [
+//                 {
+//                     "letter": "S",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "A",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "U",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "T",
+//                     "state": 2
+//                 },
+//                 {
+//                     "letter": "E",
+//                     "state": 2
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         },
+//         {
+//             "checked": false,
+//             "squares": [
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 },
+//                 {
+//                     "letter": "",
+//                     "state": 0
+//                 }
+//             ]
+//         }
+//     ],
+//     "guessIndex": 1,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "SAUTE",
+//     "seed": 275,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 0,
+//     "id": "62f61af0-3398-41ca-817f-7ae19420d686",
+//     "timestamp": 1647708918775,
+//     "version": 1,
+//     "user_id": "asd"
+// });

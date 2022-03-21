@@ -1,0 +1,9976 @@
+[
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 1
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "C",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "D",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 3,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "RADAR",
+    "seed": 1196,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "2c74b4ef-511f-42c4-a082-59f25fb65f48",
+    "timestamp": 1647562110103,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 3
+          },
+          {
+            "letter": "C",
+            "state": 3
+          },
+          {
+            "letter": "K",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "G",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 3,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "STUNG",
+    "seed": 837,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "b3304be2-af6a-49c4-9aa6-33ba2c12a518",
+    "timestamp": 1647562189260,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "D",
+            "state": 2
+          },
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LADLE",
+    "seed": 1790,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "7ab5a51d-8853-4772-9d98-a4c4d704a9bb",
+    "timestamp": 1647562207451,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "Y",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "YACHT",
+    "seed": 2047,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "3c2e2042-6ab5-4a78-8f81-88aa3c6b9988",
+    "timestamp": 1647562211903,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "G",
+            "state": 2
+          },
+          {
+            "letter": "O",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "D",
+            "state": 2
+          }
+        ]
+      }
+    ],
+    "guessIndex": 6,
+    "squareIndex": 5,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "GOURD",
+    "seed": 2222,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "4dce5440-d55d-483b-88a8-31cf611ca2ab",
+    "timestamp": 1647562562415,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "G",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 4,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LAUGH",
+    "seed": 928,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "50681e9d-7206-4f4d-bcba-5f7f3f00c4a6",
+    "timestamp": 1647562647644,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "P",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          },
+          {
+            "letter": "Z",
+            "state": 2
+          },
+          {
+            "letter": "Z",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "PIZZA",
+    "seed": 1237,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "9720a075-a700-4006-a2bc-1ec84a020b90",
+    "timestamp": 1647562679629,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "O",
+            "state": 2
+          },
+          {
+            "letter": "S",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "CHAOS",
+    "seed": 593,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "3f7fc9a1-532a-431a-a706-112aa0f4fe29",
+    "timestamp": 1647563033645,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HAZEL",
+    "seed": 882,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "6bcedc21-d72d-451f-badb-8f0089dd2c54",
+    "timestamp": 1647578413095,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "T",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HAZEL",
+    "seed": 882,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "20505283-d236-43f6-9dd2-a276c6647fa8",
+    "timestamp": 1647578420118,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "A",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HAZEL",
+    "seed": 882,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "2ed2660e-623d-4689-9114-0e7b263046ce",
+    "timestamp": 1647578420265,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "R",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HAZEL",
+    "seed": 882,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "35165a3c-e421-4e8e-8239-d8a0b815db52",
+    "timestamp": 1647578420449,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "H",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "Z",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          },
+          {
+            "letter": "L",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HAZEL",
+    "seed": 882,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "f1aad871-2664-4527-ab32-be1bbf90d51f",
+    "timestamp": 1647578420604,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "P",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "PENNE",
+    "seed": 1161,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "4aa6a79a-7968-4071-9145-3522fc0db957",
+    "timestamp": 1647579312062,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "P",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "G",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "PURGE",
+    "seed": 280,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "fd5ab38d-6e8c-4415-8943-3446b8d18590",
+    "timestamp": 1647579345776,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "STAGE",
+    "seed": 755,
+    "guessesChecked": true,
+    "state": 0,
+    "type": 1,
+    "id": "280dd134-6a50-409d-937f-1a9e7d69dd38",
+    "timestamp": 1647579355561,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "ABATE",
+    "seed": 18,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "ad661603-0d2f-4845-852f-1a42cd777ac9",
+    "timestamp": 1647579364444,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "EXPEL",
+    "seed": 1874,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "33023714-64b0-4e71-96eb-e5937d378209",
+    "timestamp": 1647579423002,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "R",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "CRISP",
+    "seed": 1700,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "37ec2155-3d8d-43e4-a990-c3e6866ad50d",
+    "timestamp": 1647579481574,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "DICEY",
+    "seed": 1794,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "0f0a5865-d458-4145-9f2d-cf9d938ee233",
+    "timestamp": 1647579481827,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SCOUR",
+    "seed": 341,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "a0baa932-c61c-4875-8bd4-1b1b0a3e522b",
+    "timestamp": 1647579483273,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "M",
+            "state": 2
+          },
+          {
+            "letter": "O",
+            "state": 2
+          },
+          {
+            "letter": "V",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "MOVIE",
+    "seed": 273,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "7fd7f9ee-f1f3-43de-b5c4-42fc1e68ef1d",
+    "timestamp": 1647562063996,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "F",
+            "state": 2
+          },
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "K",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "FLACK",
+    "seed": 394,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "e472544a-8c9e-4c25-bfdd-2d6992a3baa8",
+    "timestamp": 1647579491114,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "F",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "FRUIT",
+    "seed": 2014,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "bca8996a-1d0f-46b8-88ca-58bf9b23949e",
+    "timestamp": 1647615501914,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          },
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "D",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "TILDE",
+    "seed": 161,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "34ade493-e8b1-4c70-870b-40cd32f5eca1",
+    "timestamp": 1647615510997,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "G",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SINGE",
+    "seed": 628,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "99d60f7d-fd19-4668-b2d9-c17b5a92b820",
+    "timestamp": 1647615528101,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "CATER",
+    "seed": 272,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "118fa371-58aa-4d41-aca9-2b3bb33cd2a9",
+    "timestamp": 1647616085406,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "Y",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "40dd9fb6-e51e-4b73-92e5-46f33d6942b8",
+    "timestamp": 1647615353493,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "fad81253-2f48-46a7-bbae-cc027f36c5bb",
+    "timestamp": 1647647028504,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "efc54dc6-4956-4b88-81d1-0e7760026985",
+    "timestamp": 1647647054737,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "accf0b06-0518-437b-85dd-06c0a3c45961",
+    "timestamp": 1647647098392,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "5b864319-213c-4606-8fce-7511a0608a31",
+    "timestamp": 1647647125980,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "84b1b417-92bc-4cb0-82a1-51d1a4182b9a",
+    "timestamp": 1647647301076,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "0c3fc2ef-713e-45e7-9018-187f232b0a85",
+    "timestamp": 1647647311943,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "34e9c384-c884-4ad7-b93f-a814f6b75fae",
+    "timestamp": 1647647864415,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "56e70439-8043-41e3-8222-0e0380a27c5c",
+    "timestamp": 1647648618036,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "0600bff5-95b8-4537-862b-9a1d7c269a90",
+    "timestamp": 1647648625789,
+    "version": 1
+  },
+  {
+    "_id": "62351efb2e8af3ce75bc4b41",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "Y",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "",
+    "seed": 274,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "beacae26-7c30-43d2-9839-eebca4b24913",
+    "timestamp": 1647648507963,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "M",
+            "state": 3
+          },
+          {
+            "letter": "O",
+            "state": 3
+          },
+          {
+            "letter": "V",
+            "state": 3
+          },
+          {
+            "letter": "I",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "P",
+            "state": 3
+          },
+          {
+            "letter": "O",
+            "state": 3
+          },
+          {
+            "letter": "U",
+            "state": 3
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "B",
+            "state": 3
+          },
+          {
+            "letter": "L",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "K",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "F",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "Y",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 5,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "FANCY",
+    "seed": 1018,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "e675ef87-a5de-403e-8890-ff997ed38d4f",
+    "timestamp": 1647616396451,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 1
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "NOOSE",
+    "seed": 933,
+    "guessesChecked": true,
+    "state": 0,
+    "type": 1,
+    "id": "1e07777f-97c3-4938-9049-c880e01bc3b9",
+    "timestamp": 1647707547907,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SAUTE",
+    "seed": 275,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "098dd95d-7518-4c70-a621-310707d423bc",
+    "timestamp": 1647707094911,
+    "version": 1
+  },
+  {
+    "_id": "623525c773d77c569f7881b2",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "M",
+            "state": 3
+          },
+          {
+            "letter": "O",
+            "state": 3
+          },
+          {
+            "letter": "V",
+            "state": 3
+          },
+          {
+            "letter": "I",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "Y",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "L",
+            "state": 0
+          },
+          {
+            "letter": "Y",
+            "state": 0
+          },
+          {
+            "letter": "N",
+            "state": 0
+          },
+          {
+            "letter": "C",
+            "state": 0
+          },
+          {
+            "letter": "H",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 3,
+    "squareIndex": 5,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "LYNCH",
+    "seed": 274,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "a7f9e0e5-68db-4a06-8653-5e7b9a4cd45b",
+    "timestamp": 1647649742438,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "_id": "62360b3c1bf92a23cd8835c9",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 1
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "I",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 2,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "CACTI",
+    "seed": 1642,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "545d2228-9d69-413b-a537-99c12ba44868",
+    "timestamp": 1647708988959,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "_id": "62360baa1bf92a23cd8835ca",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "H",
+            "state": 2
+          },
+          {
+            "letter": "Y",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "HYENA",
+    "seed": 1832,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "57939df2-d448-4af8-8632-bd9aad50a17f",
+    "timestamp": 1647709098495,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "_id": "62360c2f1bf92a23cd8835cb",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "O",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "C",
+            "state": 3
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "O",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "G",
+            "state": 2
+          },
+          {
+            "letter": "H",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 3,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "TOUGH",
+    "seed": 591,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "90a82209-ebab-410f-8995-92d01ca1a10c",
+    "timestamp": 1647709231528,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "_id": "62360d801bf92a23cd8835cc",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 3
+          },
+          {
+            "letter": "T",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "C",
+            "state": 3
+          },
+          {
+            "letter": "H",
+            "state": 3
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "M",
+            "state": 1
+          },
+          {
+            "letter": "P",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "U",
+            "state": 1
+          },
+          {
+            "letter": "M",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "M",
+            "state": 3
+          },
+          {
+            "letter": "I",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "B",
+            "state": 3
+          },
+          {
+            "letter": "L",
+            "state": 1
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "N",
+            "state": 3
+          },
+          {
+            "letter": "K",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "Q",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "L",
+            "state": 2
+          },
+          {
+            "letter": "M",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 5,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "QUALM",
+    "seed": 751,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 1,
+    "id": "3b848bd1-3b2b-4f48-b37f-8a54b8329b26",
+    "timestamp": 1647709568200,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "_id": "62360af61bf92a23cd8835c8",
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 2
+          },
+          {
+            "letter": "U",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "E",
+            "state": 2
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SAUTE",
+    "seed": 275,
+    "guessesChecked": true,
+    "state": 2,
+    "type": 0,
+    "id": "62f61af0-3398-41ca-817f-7ae19420d686",
+    "timestamp": 1647708918775,
+    "version": 1,
+    "user_id": "asd"
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SAUTE",
+    "seed": 275,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "201d5281-ccbd-4dc1-9bbf-03f5624f3939",
+    "timestamp": 1647711711379,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "A",
+            "state": 0
+          },
+          {
+            "letter": "M",
+            "state": 0
+          },
+          {
+            "letter": "P",
+            "state": 0
+          },
+          {
+            "letter": "L",
+            "state": 0
+          },
+          {
+            "letter": "E",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 5,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "ABODE",
+    "seed": 1632,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "a58d76f7-3acf-4c76-9b7a-b6a2951777c6",
+    "timestamp": 1647711711379,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": true,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 2
+          },
+          {
+            "letter": "T",
+            "state": 2
+          },
+          {
+            "letter": "A",
+            "state": 3
+          },
+          {
+            "letter": "R",
+            "state": 3
+          },
+          {
+            "letter": "E",
+            "state": 3
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 1,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "STINK",
+    "seed": 14,
+    "guessesChecked": true,
+    "state": 0,
+    "type": 1,
+    "id": "b0893ef5-3bc3-46f7-b937-a2a2c677a341",
+    "timestamp": 1647711919533,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "JOUST",
+    "seed": 1271,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "ecca8573-aeaf-49ab-afd4-06e5f9fa7b41",
+    "timestamp": 1647712109144,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SMOKE",
+    "seed": 582,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "4037cca8-c1e2-48e4-bedb-83786a0b1074",
+    "timestamp": 1647712231642,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "KIOSK",
+    "seed": 840,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "79f503c6-82e7-4f03-ab06-5d9ba853ffd5",
+    "timestamp": 1647712451246,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "EQUIP",
+    "seed": 590,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "685f6065-a1ac-487a-afee-27fafcca79c8",
+    "timestamp": 1647713080852,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "E",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 5,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SOOTH",
+    "seed": 479,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "c4b13333-afb2-4ac7-996e-0a4ae122f34a",
+    "timestamp": 1647714242075,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "SAUTE",
+    "seed": 275,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 0,
+    "id": "c7b2d72e-94fe-4734-be1e-7a5ce373fd16",
+    "timestamp": 1647714253524,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "S",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 3,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "GEESE",
+    "seed": 2074,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "d1d804c2-2453-4d47-a876-3a4cc732cc6a",
+    "timestamp": 1647714253528,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "AHEAD",
+    "seed": 260,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "ffd4f2dc-61e6-4c51-83b6-aa56b6e29770",
+    "timestamp": 1647714303601,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 0,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "COMET",
+    "seed": 122,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "d7e81c4a-69ca-4e4b-b327-60a26e691ff4",
+    "timestamp": 1647714410315,
+    "version": 1
+  },
+  {
+    "board": [
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "R",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      },
+      {
+        "checked": false,
+        "squares": [
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          },
+          {
+            "letter": "",
+            "state": 0
+          }
+        ]
+      }
+    ],
+    "guessIndex": 0,
+    "squareIndex": 1,
+    "guessesAllowed": 6,
+    "guessLength": 5,
+    "answer": "",
+    "seed": -1,
+    "guessesChecked": false,
+    "state": 0,
+    "type": 1,
+    "id": "",
+    "timestamp": 0,
+    "version": 1
+  }
+]
