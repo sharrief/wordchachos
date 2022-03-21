@@ -36,10 +36,10 @@ export function Options(props: {
     </Row>
     <hr className='border border-1 border-white'/>
     <Row>
-      <Col>
+      <Col xs='4'>
         <Button variant='link' href='/privacy' rel='noreferrer' target='_blank'>{Labels.PrivacyPolicy}</Button>
       </Col>
-      <Col>
+      <Col xs='4'>
         <Button variant='link' href='http://github.com/sharrief/wordchachos' rel='noreferrer' target='_blank'>{Labels.GitHub}</Button>
       </Col>
     </Row>

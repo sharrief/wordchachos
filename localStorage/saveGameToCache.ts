@@ -2,7 +2,7 @@ import { Game } from 'types';
 
 export const SAVED_GAMES_KEY_V1 = 'wordchachos-saved-games-v1';
 
-export function saveGame(game: Game) {
+export function saveGameToCache(game: Game) {
   const allGamesString = localStorage.getItem(SAVED_GAMES_KEY_V1);
   let allGames: Game[] = [];
   if (allGamesString) {

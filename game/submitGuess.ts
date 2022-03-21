@@ -40,7 +40,7 @@ function updateBoard(board: Board, answerString: string): Board {
   return newBoard;
 }
 
-export function submitGuess(game: Game): Game {
+export function submitGuess<T extends Game>(game: T): T {
   // TODO consider using board state to keep track of guessIndex and letterIndex... they could get out of sync with the board state
   const {
     state, board: oldBoard, answer, guessesAllowed: gAllowed, guessLength: gLength,

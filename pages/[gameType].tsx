@@ -20,7 +20,7 @@ import {
 
 } from 'components/Menu';
 import {
-  KeyState, GameState, Game, GameType,
+  GameState, Game, GameType,
 } from 'types';
 import {
   addLetter,
@@ -32,35 +32,28 @@ import {
   getUninitializedGame,
 } from 'game/initGame';
 import {
-  saveGame,
-} from 'game/saveGame';
-import {
-  getMostRecentGame,
-} from 'game/getMostRecentGame';
+  saveGameToCache,
+} from 'localStorage/saveGameToCache';
 import { api } from 'pages/api/_api';
 import { Labels } from 'messages/labels';
-import { Errors } from 'messages/errors';
-import useSWR from 'swr';
 import { DateTime } from 'luxon';
 import { useRouter } from 'next/router';
-
-const devLog = false;
+import { useUser } from 'data/useUser';
+import { useCurrentGame } from 'data/useCurrentGame';
+import { useTodaysSeed } from 'data/useTodaysSeed';
+import { useVersion } from 'data/useVersion';
+import { getGuessString } from 'game/guess';
+import { submitGuess } from 'game/submitGuess';
 
 const Home: NextPage = () => {
   const router = useRouter();
   const { gameType: gameRoute } = router.query;
   const gameType = gameRoute === 'random' ? GameType.random : GameType.wordle;
 
-  const { data: version } = useSWR(['/getVersion'], async () => {
-    console.log(Labels.CheckingForUpdate(ver));
-    const { data } = await api.getVersion();
-    if (data) {
-      return data.version;
-    }
-    return data;
-  });
-
   const [updatingApp, setUpdatingApp] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const { data: version } = useVersion(ver);
   useEffect(() => {
     if (version && ver !== version) {
       console.log(Labels.FoundUpdate(ver, version));
@@ -68,109 +61,45 @@ const Home: NextPage = () => {
       window.location.reload();
     }
   }, [version]);
-  /** SWR will cache the seed using with key seedDate */
-  const { data: todaysSeed } = useSWR(() => {
-    const { year, month, day } = DateTime.local();
-    return `getWordleSeed for ${month}/${day}/${year}`;
-  }, async () => {
-    const log = (msg: string) => devLog && console.log(`getWordleSeedSWR: ${msg}`);
-    const { year, month, day } = DateTime.local();
-    log(`Fetching wordle seed for ${month}/${day}/${year}`);
-    const { data, error } = await api.getWordleSeed({ year, month, day });
-    if (error || data == null) {
-      throw new Error(error || Errors.CantGetSeed);
+  const { data: user } = useUser();
+  const { data: todaysSeed } = useTodaysSeed(DateTime.local());
+  const { data, error: useGameError, mutate: mutateGame } = useCurrentGame(user, gameType, todaysSeed ?? -1);
+  useEffect(() => {
+    if (useGameError) {
+      setErrorMsg(useGameError);
+      console.log(useGameError);
     }
-    log(`Wordle seed for ${month}/${day}/${year} is ${data}`);
-    // setSeedDate({ year, month, day });
-    return data;
-  });
-
-  /** Changing game type is used to trigger a loading the game from cache. See SWR hook below */
-  /** The fetcher/callback is only fired when the newGameType changes, otherwise SWR returns the cached value from previous call */
-  /** SWR won't call the fetcher/callback is the first function throws bc todaysSeed seed is undefined while its SWR is in process*/
-  const { data, mutate: mutateGame } = useSWR(() => {
-    if (gameType === GameType.random) {
-      /** Use the SWR key for the random game type */
-      return [`${gameType}`, gameType];
-    }
-    /** No wordle game will be loaded until todays seed is fetched */
-    if (todaysSeed == null) throw new Error('Seed not loaded');
-    /** Use the SWT key for todays wordle see */
-    return [`${gameType}-seed-${todaysSeed}`, gameType];
-  }, async (_r, t) => {
-    const log = (msg: string) => devLog && console.log(`getGameSWR: ${msg}`);
-    try {
-      const dt = DateTime.local();
-      const { year, month, day } = dt;
-      log(`Finding a game for ${month}/${day}/${year}`);
-      /** Try to load from savedGames first */
-      const savedGame = getMostRecentGame(t);
-      if (savedGame) {
-        log(`Saved game seed is ${savedGame.seed}. Todays is ${todaysSeed}`);
-        if (t === GameType.random || (todaysSeed === savedGame.seed)) {
-          log('Returning saved game');
-          return { game: savedGame as Game, error: '' };
-        }
-      }
-      /** No saved games (with todays seed, for wordle...) found for the GameType, so Initialize a new game */
-      /** For random games, after the first such call to this SWR, new random games will be started by handleNewRandomGame */
-      log(`Starting a new game with seed date ${month}/${day}/${year}`);
-      const today = { year, month, day };
-      const { data: game, error } = await api.initGame({ gameType: t ?? GameType.wordle, date: today });
-      if (game) {
-        log(`Saving the new game with seed ${game.seed}`);
-        saveGame(game);
-      }
-      return { error, game: game as Game };
-    } catch ({ message }) {
-      return { error: message as string, game: undefined as unknown as Game };
-    }
-  });
+  }, [useGameError]);
   const setGame = (newGame: Game) => {
     /** Save game state to local storage */
-    saveGame(newGame);
+    saveGameToCache(newGame);
     /** trigger reload of the game through SWR */
-    mutateGame();
+    mutateGame(newGame, { revalidate: false });
   };
   // const [game, setGame] = useState<Game>(initialGame);
-  const game = data?.game || getUninitializedGame(gameType);
+  const game = data ?? getUninitializedGame(gameType);
   const {
-    state, board, guessIndex,
+    state, board, guessIndex, _id,
   } = game;
-
+  const isCloudGame = !!_id;
   const [busy, setBusy] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
   const [showEndScreen, setShowEndScreen] = useState(false);
-  const handleNewRandomGame = async () => {
-    setBusy(true);
-    if (gameType === GameType.random) {
-      const { year, month, day } = DateTime.local();
-      const { data: newGame, error } = await api.initGame({ gameType: GameType.random, date: { year, month, day } });
-      if (error) { setErrorMsg(error); }
-      if (newGame?.board) {
-        setGame({ ...newGame });
-      }
-      setShowEndScreen(false);
-    }
-    setBusy(false);
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClickNewGame = () => {
-    setShowEndScreen(false);
-    handleNewRandomGame();
-  };
   useEffect(() => {
-    if (game.type === GameType.wordle && game.seed !== todaysSeed) {
+    if (game?.state === GameState.active || game.seed < 0 || (game.type === GameType.wordle && game.seed !== todaysSeed)) {
       setShowEndScreen(false);
     }
   }, [game, todaysSeed]);
   useEffect(() => {
-    if (state && state !== GameState.active) { setShowEndScreen(true); }
-  }, [state]);
+    if (game.seed != null && game.state !== GameState.active) {
+      setShowEndScreen(true);
+    }
+  }, [game]);
 
   useEffect(() => {
     if (errorMsg) {
-      setTimeout(() => setErrorMsg(''), 1000);
+      setTimeout(() => setErrorMsg(''), 2000);
     }
   }, [errorMsg]);
   useEffect(() => {
@@ -185,13 +114,27 @@ const Home: NextPage = () => {
       setGame({ ...newGame });
     }
   };
-  const clickedLetter = (letter: string) => {
-    if (state !== GameState.active || busy) return;
+  const handleNewRandomGame = async () => {
+    setBusy(true);
+    const { year, month, day } = DateTime.local();
+    const res = await api.fetchNewGame({ gameType: GameType.random, date: { year, month, day } });
+    handleResponse(res);
+    setShowEndScreen(false);
+    setBusy(false);
+  };
+
+  const clickedNewGame = () => {
+    setShowEndScreen(false);
+    handleNewRandomGame();
+  };
+
+  const clickedLetter = async (letter: string) => {
+    if (!game?.board || (state !== GameState.active || busy)) return;
     const updatedGame = addLetter(letter, game);
     setGame({ ...updatedGame });
   };
   const clickedBackspace = async () => {
-    if (state !== GameState.active || busy) return;
+    if (!game?.board || (state !== GameState.active || busy)) return;
     const updatedGame = removeLetter(game);
     setGame({ ...updatedGame });
   };
@@ -200,23 +143,16 @@ const Home: NextPage = () => {
       setShowEndScreen(true);
     } else if (!busy && game.squareIndex === game.guessLength) {
       setBusy(true);
-      const res = await api.submitGuess({ game });
-      handleResponse(res);
+      if (user && isCloudGame) {
+        const res = await api.postGuess({ gameType, guessString: getGuessString(board[guessIndex]) });
+        handleResponse(res);
+      } else {
+        const updatedGame = submitGuess(game);
+        setGame({ ...updatedGame });
+      }
       setBusy(false);
     }
   };
-
-  const getKeyGuessState = (letter: string) => board
-    .filter((_, gI) => gI < guessIndex)
-    .reduce((stateForCurrentKey, guess) => {
-      if (stateForCurrentKey === KeyState.Position) return stateForCurrentKey;
-      const matchingSquare = guess.squares.find((square) => square.letter === letter);
-      if (matchingSquare) {
-        return matchingSquare.state;
-      }
-      return stateForCurrentKey;
-    }, KeyState.Unused as KeyState);
-
   return (
 
     <div className='h-100 d-flex flex-column justify-content-between'>
@@ -227,7 +163,7 @@ const Home: NextPage = () => {
         show={showEndScreen}
         game={game}
         onHide={() => setShowEndScreen(false)}
-        handleNewRandomGame={handleClickNewGame}
+        handleNewRandomGame={clickedNewGame}
       />
       <div className='fixed-top mt-5'>
         <AnimatePresence>
@@ -253,24 +189,24 @@ const Home: NextPage = () => {
                   <p>{Labels.NewVersion}</p>
                   <p>v{ver} {'--->'} v{version}</p>
                   <ProgressBar variant='warning' animated now={100} />
-                  </Modal.Body>
+                </Modal.Body>
               </Modal>
             }
           </motion.div>
         </AnimatePresence>
       </div>
       <div>
-        <Menu game={game} seed={todaysSeed} />
+        <Menu game={game} seed={todaysSeed} setOpen={(open) => setMenuOpen(open)}/>
         <Container fluid className='mx-auto mt-2 d-flex flex-row flex-wrap justify-content-center'>
           <GameBoard game={game} />
         </Container>
       </div>
       <KeyBoard
         {...{
+          captureKeyPress: !menuOpen,
           clickedLetter,
           clickedBackspace,
           clickedEnter,
-          getLetterGuessState: getKeyGuessState,
           game,
           busy,
         }}

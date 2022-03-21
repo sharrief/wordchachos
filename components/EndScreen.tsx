@@ -2,14 +2,14 @@ import {
   Button, ButtonGroup, Container, Modal,
 } from 'react-bootstrap';
 import { Labels } from 'messages/labels';
+import { Errors } from 'messages/errors';
 import {
   Game, GameState, GameType, KeyState,
 } from 'types';
 import { Add, Share } from '@material-ui/icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import * as emoji from 'github-emoji';
-import { saveGame } from 'game/saveGame';
 import { getGuessesUsed } from 'game/board';
 import { getScore } from 'game/getScore';
 import { Stats } from './Stats';
@@ -24,14 +24,18 @@ export function EndScreen(props: {
   const {
     show, game, onHide, handleNewRandomGame,
   } = props;
-  useEffect(() => {
-    if (game?.state !== GameState.active) {
-      saveGame(game);
-    }
-  }, [game]);
+  const [copied, setCopied] = useState(false);
+  const handleOnHide = () => {
+    setCopied(false);
+    onHide();
+  };
   const {
     board, state, guessIndex: guesses, answer, type, seed, guessesAllowed,
   } = game;
+  if (!game.board) {
+    onHide();
+    return null;
+  }
   const guessesUsed = getGuessesUsed(board);
   const win = state === GameState.win;
   const loss = state === GameState.loss;
@@ -50,11 +54,6 @@ ${board.filter((_, idx) => idx < guesses)
       }
     }).join('')).join(`
 `)}`;
-  const [copied, setCopied] = useState(false);
-  const handleOnHide = () => {
-    setCopied(false);
-    onHide();
-  };
 
   return (<Modal show={show} centered onHide={handleOnHide}>
     <Modal.Header closeButton>
@@ -64,12 +63,12 @@ ${board.filter((_, idx) => idx < guesses)
       </Modal.Title>
     </Modal.Header>
     <Modal.Body>
-      <Container className="text-center">
+      <Container className="text-center mb-3">
         <div className='fs-4'>
           {win && `${Labels.WinSubtitle(guesses)}`}
           {loss && `${Labels.LossSubtitle}`}
         </div>
-        <div className='fs-5'>{Labels.TheAnswerWas} {(win || loss) ? <span className='text-warning'>{answer}</span> : ''}</div>
+        <div className='fs-5'>{Labels.TheAnswerWas} {(win || loss) ? <span className='text-warning'>{answer || Errors.MissingAnswer}</span> : ''}</div>
         <GameStars guessesAllowed={guessesAllowed} guessesUsed={guessesUsed} size='lg' />
         <div className='fs-3'>+{getScore(guessesUsed)}</div>
         <p>{Labels.ShareGameMessage}</p>
@@ -91,8 +90,7 @@ ${board.filter((_, idx) => idx < guesses)
             </Button>}
         </ButtonGroup>
       </Container>
-      <hr className="border border-1" />
-      <Stats show={show} game={game}/>
+      <Stats/>
     </Modal.Body>
   </Modal>);
 }

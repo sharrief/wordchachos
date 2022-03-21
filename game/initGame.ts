@@ -37,8 +37,8 @@ export const getUninitializedGame = (gameType = GameType.wordle, guessesAllowed 
   };
 };
 
-export function initGame(gameType: GameType, date: SimpleDate, guessesAllowed = 6): Game {
-  const { seed, answer } = (getWotD(date, gameType));
+export function initGame(gameType: GameType, date?: SimpleDate, guessesAllowed = 6): Game {
+  const { seed, answer } = getWotD(date, gameType);
   const guessLength = answer.length;
   const timestamp = DateTime.local().valueOf();
   const id = uuid();

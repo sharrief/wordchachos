@@ -1,7 +1,5 @@
 import { Labels } from 'messages/labels';
-import { Game, GameState } from 'types';
-import { useEffect, useState } from 'react';
-import { getSavedGames } from 'game/getSavedGames';
+import { GameState, GameType } from 'types';
 import { Bar } from 'react-chartjs-2';
 import ChartDataLabels, { Context } from 'chartjs-plugin-datalabels';
 import {
@@ -14,6 +12,13 @@ import {
   Legend,
 } from 'chart.js';
 import { getGuessesUsed } from 'game/board';
+import { DateTime } from 'luxon';
+import { useRouter } from 'next/router';
+import { getUninitializedGame } from 'game/initGame';
+import { useCurrentGame } from './data/useCurrentGame';
+import { useTodaysSeed } from './data/useTodaysSeed';
+import { useUser } from './data/useUser';
+import { useGames } from './data/useGames';
 
 ChartJS.register(
   CategoryScale,
@@ -25,24 +30,18 @@ ChartJS.register(
   ChartDataLabels,
 );
 
-export function GuessChart(props: {
-  show: boolean;
-  game: Game;
-}) {
-  const { show, game } = props;
-  const {
-    guessIndex: guesses, type, guessesAllowed, state,
-  } = game;
+export function GuessChart() {
+  const router = useRouter();
+  const { gameType: gameRoute } = router.query;
+  const type = gameRoute === 'random' ? GameType.random : GameType.wordle;
+  const { data: user } = useUser();
+  const { data: todaysSeed } = useTodaysSeed(DateTime.local());
+  const { data: game } = useCurrentGame(user, type, todaysSeed);
+  const { data: gameHistory } = useGames(user);
+  const { state, guessesAllowed, guessIndex } = game || getUninitializedGame(type);
   const gameComplete = state !== GameState.active;
 
-  const [gameHistory, setGameHistory] = useState<Game[]>([]);
-  useEffect(() => {
-    if (show) {
-      const history = getSavedGames();
-      if (history?.length) { setGameHistory(history); }
-    }
-  }, [show]);
-  const guessesUsedByGame = gameHistory
+  const guessesUsedByGame = (gameHistory || [])
     .filter((g) => g.type === type)
     .map((g) => {
       const { board, state: s } = g;
@@ -62,11 +61,11 @@ export function GuessChart(props: {
         data: guessesUsedDataArray,
         borderColor: (context: Context) => {
           const guessNumber = context.dataIndex + 1;
-          return (gameComplete && guessNumber === guesses) ? '#3cf281' : '#444';
+          return (gameComplete && guessNumber === guessIndex) ? '#3cf281' : '#444';
         },
         backgroundColor: (context: Context) => {
           const guessNumber = context.dataIndex + 1;
-          return (gameComplete && guessNumber === guesses) ? '#3cf281' : '#444';
+          return (gameComplete && guessNumber === guessIndex) ? '#3cf281' : '#444';
         },
         datalabels: {
           display(context: Context) {
@@ -74,7 +73,7 @@ export function GuessChart(props: {
           },
           color: (context: Context) => {
             const guessNumber = context.dataIndex + 1;
-            return (gameComplete && guessNumber === guesses) ? '#000' : '#fff';
+            return (gameComplete && guessNumber === guessIndex) ? '#000' : '#fff';
           },
           anchor: 'end',
           align: 'start',
@@ -137,7 +136,6 @@ export function GuessChart(props: {
   };
 
   return <>
-    <div className="text-center mt-4"><h5>{Labels.GuessDistribution}</h5></div>
     <Bar options={options} data={dataSet} />
   </>;
 }

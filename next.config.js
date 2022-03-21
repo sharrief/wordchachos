@@ -6,7 +6,7 @@ const nextConfig = {
       {
         source: '/',
         destination: '/wordle',
-        permanent: true,
+        permanent: false,
       },
       {
         source: '/privacy',

@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "components/*": ["components/*"],
+      "data/*": ["components/data/*"],
       "game/*": ["game/*"],
       "api/*": ["pages/api/*"],
       "types": ["types.d"],

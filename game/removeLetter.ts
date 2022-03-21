@@ -7,7 +7,7 @@ import { getSquare } from 'game/guess';
  * @param game The Game state
  * @returns The updated game state, with the previous Square's letter cleared
  */
-export function removeLetter(game: Game): Game {
+export function removeLetter<T extends Game>(game: T): T {
   const { board } = game;
   const { guessIndex, squareIndex } = getActiveSquareCoordinates(board);
   if (squareIndex > 0) {

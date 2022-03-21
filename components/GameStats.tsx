@@ -1,30 +1,25 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import { Labels } from 'messages/labels';
-import { Game, GameState } from 'types';
-import { useEffect, useState } from 'react';
-import { getSavedGames } from 'game/getSavedGames';
+import { GameState, GameType } from 'types';
 import { getGuessesUsed } from 'game/board';
 import { getScore } from 'game/getScore';
 import { shortNumber } from 'utils/shortNumber';
+import { useRouter } from 'next/router';
 import { GameStreak } from './GuessStreak';
+import { useGames } from './data/useGames';
+import { useUser } from './data/useUser';
 
-export function GameStats(props: {
-  show: boolean;
-  game: Game;
-}) {
-  const { show, game } = props;
-  const { type } = game;
+export function GameStats() {
+  const router = useRouter();
+  const { gameType: gameRoute } = router.query;
+  const type = gameRoute === 'random' ? GameType.random : GameType.wordle;
 
-  const [gameHistory, setGameHistory] = useState<Game[]>([]);
-  useEffect(() => {
-    if (show) {
-      const history = getSavedGames();
-      if (history?.length) { setGameHistory(history); }
-    }
-  }, [show]);
+  const { data: user } = useUser();
+  const { data: gameHistory } = useGames(user);
+
   const {
     played, currentStreak, maxStreak, score,
-  } = gameHistory
+  } = (gameHistory || [])
     .filter((g) => g.type === type && g.state !== GameState.active)
     .reduce((stats, g) => {
       let p = stats.played;
@@ -57,9 +52,6 @@ export function GameStats(props: {
 
   return (
     <Container>
-      <Row><Col className='d-flex flex-column align-items-center'>
-        <h5>{Labels.StatisticsSubtitle}</h5>
-      </Col></Row>
       <Row>
         <Col className='d-flex flex-column align-items-center'>
           <Row><span className='fs-3'>{played}</span></Row>

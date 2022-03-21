@@ -1,5 +1,5 @@
 import {
-  Game, GameType, SimpleDate, Version,
+  Game, GameType, SimpleDate, User, Version,
 } from 'types';
 
 function createRequest<T>(postData: T) {
@@ -45,29 +45,37 @@ async function fetchRoute<T, M>(endpoint: string, postData?: T): Promise<{ error
   }
 }
 
-function addLetter<B extends { letter: string; game: Game}>(body: B) {
-  return fetchRoute<B, Game>('/api/addLetter', body);
+function postGuess<B extends { guessString: string; gameType: GameType }>(body: B) {
+  return fetchRoute<B, Game>('/api/postGuess', body);
 }
-function removeLetter<B extends { game: Game }>(body: B) {
-  return fetchRoute<B, Game>('/api/removeLetter', body);
+function fetchNewGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
+  return fetchRoute<B, Game>('/api/fetchNewGame', body);
 }
-function submitGuess<B extends { game: Game}>(body: B) {
-  return fetchRoute<B, Game>('/api/submitGuess', body);
+function fetchWordleSeed<B extends SimpleDate>(body: B) {
+  return fetchRoute<B, number>('/api/fetchWordleSeed', body);
 }
-function initGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
-  return fetchRoute<B, Game>('/api/initGame', body);
+function fetchVersion() {
+  return fetchRoute<null, Version>('/api/fetchVersion');
 }
-function getWordleSeed<B extends SimpleDate>(body: B) {
-  return fetchRoute<B, number>('/api/getWordleSeed', body);
+function fetchUser() {
+  return fetchRoute<null, User>('/api/fetchUser');
 }
-function getVersion() {
-  return fetchRoute<null, Version>('/api/getVersion');
+function fetchGame<B extends { gameType: GameType }>(body: B) {
+  return fetchRoute<B, Game>('/api/fetchGame', body);
+}
+function fetchGames() {
+  return fetchRoute<null, Game[]>('/api/fetchGames');
+}
+function postUploadGames<B extends { games: Game[] }>(body: B) {
+  return fetchRoute<B, Game[]>('/api/postUploadGames', body);
 }
 export const api = {
-  addLetter,
-  removeLetter,
-  submitGuess,
-  initGame,
-  getWordleSeed,
-  getVersion,
+  postGuess,
+  fetchNewGame,
+  fetchWordleSeed,
+  fetchVersion,
+  fetchUser,
+  fetchGame,
+  fetchGames,
+  postUploadGames,
 };

@@ -40,3 +40,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+database/ MongoDB Playground.mongodb
+database/localgamesbackup.json

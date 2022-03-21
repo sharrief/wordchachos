@@ -4,24 +4,36 @@ import {
 import { Spinner } from 'react-bootstrap';
 import { Key } from 'components/Key';
 import {
+  Board,
   Game, GameState, GameType, KeyState,
 } from 'types';
 import { useEffect } from 'react';
 import { Labels } from 'messages/labels';
 
+const getKeyGuessState = (letter: string, board: Board, guessIndex: number) => board
+  .filter((_, gI) => gI < guessIndex)
+  .reduce((stateForCurrentKey, guess) => {
+    if (stateForCurrentKey === KeyState.Position) return stateForCurrentKey;
+    const matchingSquare = guess.squares.find((square) => square.letter === letter);
+    if (matchingSquare) {
+      return matchingSquare.state;
+    }
+    return stateForCurrentKey;
+  }, KeyState.Unused as KeyState);
+
 export function KeyBoard(props: {
   clickedLetter: (letter: string) => void;
   clickedBackspace: () => void;
   clickedEnter: () => void;
-  getLetterGuessState: (letter: string) => KeyState;
   busy: boolean;
   game: Game;
+  captureKeyPress: boolean;
 }) {
   const {
     clickedLetter,
     clickedBackspace,
     clickedEnter, busy,
-    game, getLetterGuessState,
+    game, captureKeyPress,
   } = props;
   const {
     board, guessIndex, squareIndex, guessLength, state, type,
@@ -37,11 +49,13 @@ export function KeyBoard(props: {
   const thirdRowLetters = 'zxcvbnm';
   const allLetters = `${firstRowLetters}${secondRowLetters}${thirdRowLetters}`;
   const handleKeyPress = (event: KeyboardEvent) => {
-    if (allLetters.includes(event.key.toLowerCase())) {
-      clickedLetter(event.key.toUpperCase());
+    if (captureKeyPress) {
+      if (allLetters.includes(event.key.toLowerCase())) {
+        clickedLetter(event.key.toUpperCase());
+      }
+      if (event.key === 'Enter') clickedEnter();
+      if (event.key === 'Backspace') clickedBackspace();
     }
-    if (event.key === 'Enter') clickedEnter();
-    if (event.key === 'Backspace') clickedBackspace();
   };
   useEffect(() => {
     document.addEventListener('keydown', handleKeyPress);
@@ -57,7 +71,7 @@ export function KeyBoard(props: {
         label={key}
         value={key}
         onClick={clickedLetter}
-        guessState={getLetterGuessState(key)}
+        guessState={getKeyGuessState(key, board, guessIndex)}
       />)}
     </div>
     <div className={rowClass}>
@@ -67,7 +81,7 @@ export function KeyBoard(props: {
         key={key} label={key}
         value={key}
         onClick={clickedLetter}
-        guessState={getLetterGuessState(key)} />)}
+        guessState={getKeyGuessState(key, board, guessIndex)} />)}
       <div style={{ flex: 0.5 }}></div>
     </div>
     <div className={rowClass}>
@@ -87,7 +101,7 @@ export function KeyBoard(props: {
         label={key}
         value={key}
         onClick={clickedLetter}
-        guessState={getLetterGuessState(key)} />)}
+        guessState={getKeyGuessState(key, board, guessIndex)} />)}
       <Key
         value={''}
         action='delete'

@@ -35,7 +35,8 @@
     "max-len": "off",
     "class-methods-use-this ": "off",
     "@typescript-eslint/interface-name-prefix": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-underscore-dangle": "off"
   },
   "plugins": [ "import", "@typescript-eslint", "react" ],
   "settings": {
