@@ -19,7 +19,6 @@
     "@types/node": "^17.0.21",
     "chart.js": "^3.7.1",
     "chartjs-plugin-datalabels": "^2.0.0",
-    "cookie-cutter": "^0.2.0",
     "framer-motion": "^6.2.8",
     "github-emoji": "^1.2.0",
     "license-checker": "^25.0.1",
