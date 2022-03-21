@@ -57,11 +57,11 @@ export function GameStats(props: {
       score: 0,
       guesses: 0,
     });
-  const ppg = score / played;
+  const ppg = Math.floor((score / played) * 100) / 100;
   const [showPPG, setShowPPG] = useState(false);
   const toggleShowPPG = () => setShowPPG(!showPPG);
 
-  const avgGuesses = guesses / played;
+  const avgGuesses = Math.floor((guesses / played) * 100) / 100;
   const [showAvgGuesses, setShowAvgGuesses] = useState(false);
   const toggleShowAvgGuesses = () => setShowAvgGuesses(!showAvgGuesses);
   return (
@@ -73,7 +73,7 @@ export function GameStats(props: {
         <Col className='d-flex flex-column align-items-center' onClick={toggleShowAvgGuesses}>
           {showAvgGuesses
             ? <>
-              <span className='fs-3'>{Math.floor(avgGuesses * 100) / 100}</span>
+              <span className='fs-3'>{avgGuesses}</span>
               <div className='text-center'>{Labels.GPG}</div>
             </>
             : <>
