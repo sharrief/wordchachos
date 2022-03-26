@@ -1,0 +1,1373 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('wordchachos');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+// db.users.drop();
+
+db.games.drop();
+db.games.insertOne({
+  "board": [
+    {
+      "checked": true,
+      "squares": [
+        {
+          "letter": "S",
+          "state": 3
+        },
+        {
+          "letter": "T",
+          "state": 3
+        },
+        {
+          "letter": "A",
+          "state": 3
+        },
+        {
+          "letter": "R",
+          "state": 3
+        },
+        {
+          "letter": "E",
+          "state": 3
+        }
+      ]
+    },
+    {
+      "checked": true,
+      "squares": [
+        {
+          "letter": "M",
+          "state": 3
+        },
+        {
+          "letter": "O",
+          "state": 3
+        },
+        {
+          "letter": "V",
+          "state": 3
+        },
+        {
+          "letter": "I",
+          "state": 3
+        },
+        {
+          "letter": "E",
+          "state": 3
+        }
+      ]
+    },
+    {
+      "checked": true,
+      "squares": [
+        {
+          "letter": "L",
+          "state": 2
+        },
+        {
+          "letter": "Y",
+          "state": 2
+        },
+        {
+          "letter": "N",
+          "state": 2
+        },
+        {
+          "letter": "C",
+          "state": 2
+        },
+        {
+          "letter": "H",
+          "state": 2
+        }
+      ]
+    },
+    {
+      "checked": false,
+      "squares": [
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        }
+      ]
+    },
+    {
+      "checked": false,
+      "squares": [
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        }
+      ]
+    },
+    {
+      "checked": false,
+      "squares": [
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        },
+        {
+          "letter": "",
+          "state": 0
+        }
+      ]
+    }
+  ],
+  "guessIndex": 3,
+  "squareIndex": 0,
+  "guessesAllowed": 6,
+  "guessLength": 5,
+  "answer": "LYNCH",
+  "seed": 274,
+  "guessesChecked": true,
+  "state": 2,
+  "type": 0,
+  "id": "a7f9e0e5-68db-4a06-8653-5e7b9a4cd45b",
+  "timestamp": 1647649742438,
+  "version": 1,
+  "user_id": "asd"
+})
+
+// db.users.insertMany({
+//   id: 'asd',
+//   name: 'sharrief',
+//   code: '1234'
+// })
+// Insert a few documents into the sales collection.
+// db.games.insertMany([
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "C",
+//             "state": 3
+//           },
+//           {
+//             "letter": "H",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "P",
+//             "state": 3
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "L",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "T",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "G",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "T",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 4,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "GRATE",
+//     "seed": 484,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "282c0a33-3ece-4912-88e5-649eed901dff",
+//     "timestamp": 1647454586186,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "T",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "T",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           },
+//           {
+//             "letter": "N",
+//             "state": 2
+//           },
+//           {
+//             "letter": "O",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 3,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "TENOR",
+//     "seed": 1828,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "f5687345-9cf7-4998-aa59-27f24c9d9115",
+//     "timestamp": 1647457258795,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 6,
+//     "squareIndex": 5,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "METRO",
+//     "seed": 2106,
+//     "guessesChecked": true,
+//     "state": 1,
+//     "type": 1,
+//     "id": "199d90db-5c8f-4f43-ac8e-10fe2d3334aa",
+//     "timestamp": 1647457342717,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 3
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "C",
+//             "state": 2
+//           },
+//           {
+//             "letter": "H",
+//             "state": 2
+//           },
+//           {
+//             "letter": "O",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "D",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 2,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "CHORD",
+//     "seed": 826,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "1a7bb72a-76e9-4d8f-98ff-f24e43ffbad2",
+//     "timestamp": 1647457354875,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 3
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "C",
+//             "state": 3
+//           },
+//           {
+//             "letter": "H",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "I",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "B",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "W",
+//             "state": 3
+//           },
+//           {
+//             "letter": "L",
+//             "state": 3
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "D",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "N",
+//             "state": 3
+//           },
+//           {
+//             "letter": "K",
+//             "state": 3
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "D",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "M",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           }
+//         ]
+//       },
+//       {
+//         "checked": false,
+//         "squares": [
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           },
+//           {
+//             "letter": "",
+//             "state": 0
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 5,
+//     "squareIndex": 0,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "DRAMA",
+//     "seed": 1831,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 1,
+//     "id": "866a3e18-e4fb-4260-9ce4-f110674981c3",
+//     "timestamp": 1647457374351,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 1
+//           },
+//           {
+//             "letter": "A",
+//             "state": 1
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "C",
+//             "state": 2
+//           },
+//           {
+//             "letter": "A",
+//             "state": 2
+//           },
+//           {
+//             "letter": "T",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 6,
+//     "squareIndex": 5,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "CATER",
+//     "seed": 272,
+//     "guessesChecked": true,
+//     "state": 2,
+//     "type": 0,
+//     "id": "082a8068-28f3-4ba3-af9f-00a22d8bb661",
+//     "timestamp": 1647455478414,
+//     "version": 1,
+//     "user_id": 'asd',
+//   },
+//   {
+//     "board": [
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "S",
+//             "state": 3
+//           },
+//           {
+//             "letter": "T",
+//             "state": 3
+//           },
+//           {
+//             "letter": "A",
+//             "state": 3
+//           },
+//           {
+//             "letter": "R",
+//             "state": 1
+//           },
+//           {
+//             "letter": "E",
+//             "state": 1
+//           }
+//         ]
+//       },
+//       {
+//         "checked": true,
+//         "squares": [
+//           {
+//             "letter": "N",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           },
+//           {
+//             "letter": "W",
+//             "state": 2
+//           },
+//           {
+//             "letter": "E",
+//             "state": 2
+//           },
+//           {
+//             "letter": "R",
+//             "state": 2
+//           }
+//         ]
+//       }
+//     ],
+//     "guessIndex": 6,
+//     "squareIndex": 5,
+//     "guessesAllowed": 6,
+//     "guessLength": 5,
+//     "answer": "NEWER",
+//     "seed": 2139,
+//     "guessesChecked": true,
+//     "state": 0,
+//     "type": 1,
+//     "id": "56c6055b-9544-44ce-b2a9-e076faee3674",
+//     "timestamp": 1647469019115,
+//     "version": 1,
+//     "user_id": 'asd',
+//   }
+// ]);
+// const user = db.users.findOne({ name: 'sharrief', code: '1234'})
+
+// // Run a find command to view items sold on April 4th, 2014.
+// db.sales.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// // Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+//   { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// // Run the aggregation and open a cursor to the results.
+// // Use toArray() to exhaust the cursor to return the whole result set.
+// // You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);

@@ -3,6 +3,7 @@
 #development
 .vscode
 *.env
+/database
 
 # dependencies
 /node_modules
