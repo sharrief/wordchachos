@@ -19,7 +19,7 @@ export enum GameState {
   active, loss, win,
 }
 export enum GameType {
-  wordle, random
+  WotD, Random, Wordle,
 }
 export type Game = {
   board: Board;

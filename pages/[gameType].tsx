@@ -44,12 +44,16 @@ import useSWR from 'swr';
 import { DateTime } from 'luxon';
 import { useRouter } from 'next/router';
 
-const devLog = false;
+const devLog = true;
 
 const Home: NextPage = () => {
   const router = useRouter();
   const { gameType: gameRoute } = router.query;
-  const gameType = gameRoute === 'random' ? GameType.random : GameType.wordle;
+  const gameType = (() => {
+    if (gameRoute === 'wordOfTheDay') return GameType.WotD;
+    if (gameRoute === 'wordle') return GameType.Wordle;
+    return GameType.Random;
+  })();
 
   const { data: version } = useSWR(['/getVersion'], async () => {
     console.log(Labels.CheckingForUpdate(ver));
@@ -71,16 +75,18 @@ const Home: NextPage = () => {
   /** SWR will cache the seed using with key seedDate */
   const { data: todaysSeed } = useSWR(() => {
     const { year, month, day } = DateTime.local();
-    return `getWordleSeed for ${month}/${day}/${year}`;
+    return `getSeed for ${gameType} on ${month}/${day}/${year}`;
   }, async () => {
-    const log = (msg: string) => devLog && console.log(`getWordleSeedSWR: ${msg}`);
+    const log = (msg: string) => devLog && console.log(`getSeedSWR: ${msg}`);
     const { year, month, day } = DateTime.local();
-    log(`Fetching wordle seed for ${month}/${day}/${year}`);
-    const { data, error } = await api.getWordleSeed({ year, month, day });
+    log(`Fetching ${gameType} seed for ${month}/${day}/${year}`);
+    const { data, error } = await api.getWotDSeed({
+      year, month, day, gameType,
+    });
     if (error || data == null) {
       throw new Error(error || Errors.CantGetSeed);
     }
-    log(`Wordle seed for ${month}/${day}/${year} is ${data}`);
+    log(`${gameType} seed for ${month}/${day}/${year} is ${data}`);
     // setSeedDate({ year, month, day });
     return data;
   });
@@ -89,25 +95,25 @@ const Home: NextPage = () => {
   /** The fetcher/callback is only fired when the newGameType changes, otherwise SWR returns the cached value from previous call */
   /** SWR won't call the fetcher/callback is the first function throws bc todaysSeed seed is undefined while its SWR is in process*/
   const { data, mutate: mutateGame } = useSWR(() => {
-    if (gameType === GameType.random) {
+    if (gameType === GameType.Random) {
       /** Use the SWR key for the random game type */
       return [`${gameType}`, gameType];
     }
     /** No wordle game will be loaded until todays seed is fetched */
     if (todaysSeed == null) throw new Error('Seed not loaded');
-    /** Use the SWT key for todays wordle see */
+    /** Use the SWT key for todays seed */
     return [`${gameType}-seed-${todaysSeed}`, gameType];
   }, async (_r, t) => {
     const log = (msg: string) => devLog && console.log(`getGameSWR: ${msg}`);
     try {
       const dt = DateTime.local();
       const { year, month, day } = dt;
-      log(`Finding a game for ${month}/${day}/${year}`);
+      log(`Finding a ${t} game for ${month}/${day}/${year}`);
       /** Try to load from savedGames first */
       const savedGame = getMostRecentGame(t);
       if (savedGame) {
         log(`Saved game seed is ${savedGame.seed}. Todays is ${todaysSeed}`);
-        if (t === GameType.random || (todaysSeed === savedGame.seed)) {
+        if (t === GameType.Random || (todaysSeed === savedGame.seed)) {
           log('Returning saved game');
           return { game: savedGame as Game, error: '' };
         }
@@ -116,7 +122,7 @@ const Home: NextPage = () => {
       /** For random games, after the first such call to this SWR, new random games will be started by handleNewRandomGame */
       log(`Starting a new game with seed date ${month}/${day}/${year}`);
       const today = { year, month, day };
-      const { data: game, error } = await api.initGame({ gameType: t ?? GameType.wordle, date: today });
+      const { data: game, error } = await api.initGame({ gameType: t ?? GameType.WotD, date: today });
       if (game) {
         log(`Saving the new game with seed ${game.seed}`);
         saveGame(game);
@@ -143,9 +149,9 @@ const Home: NextPage = () => {
   const [showEndScreen, setShowEndScreen] = useState(false);
   const handleNewRandomGame = async () => {
     setBusy(true);
-    if (gameType === GameType.random) {
+    if (gameType === GameType.Random) {
       const { year, month, day } = DateTime.local();
-      const { data: newGame, error } = await api.initGame({ gameType: GameType.random, date: { year, month, day } });
+      const { data: newGame, error } = await api.initGame({ gameType: GameType.Random, date: { year, month, day } });
       if (error) { setErrorMsg(error); }
       if (newGame?.board) {
         setGame({ ...newGame });
@@ -160,7 +166,7 @@ const Home: NextPage = () => {
     handleNewRandomGame();
   };
   useEffect(() => {
-    if (game.type === GameType.wordle && game.seed !== todaysSeed) {
+    if (game.type === GameType.WotD && game.seed !== todaysSeed) {
       setShowEndScreen(false);
     }
   }, [game, todaysSeed]);

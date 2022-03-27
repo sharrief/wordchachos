@@ -85,10 +85,8 @@ export function submitGuess(game: Game): Game {
       /** Guesses remain. Game continues */
       return { ...updatedGame, board: newBoard, guessesChecked };
     }
-    /** A correct guess was made. Game won */
-    const seed = getWordList().reduce((s, w, i) => (w.toUpperCase() === answer ? i : s), 0);
     return {
-      ...updatedGame, board: newBoard, guessesChecked, state: GameState.win, seed,
+      ...updatedGame, board: newBoard, guessesChecked, state: GameState.win,
     };
   }
   return game;

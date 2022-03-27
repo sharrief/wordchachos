@@ -57,8 +57,8 @@ function submitGuess<B extends { game: Game}>(body: B) {
 function initGame<B extends { gameType: GameType; date: SimpleDate}>(body: B) {
   return fetchRoute<B, Game>('/api/initGame', body);
 }
-function getWordleSeed<B extends SimpleDate>(body: B) {
-  return fetchRoute<B, number>('/api/getWordleSeed', body);
+function getSeed<B extends SimpleDate & { gameType: GameType }>(body: B) {
+  return fetchRoute<B, number>('/api/getSeed', body);
 }
 function getVersion() {
   return fetchRoute<null, Version>('/api/getVersion');
@@ -68,6 +68,6 @@ export const api = {
   removeLetter,
   submitGuess,
   initGame,
-  getWordleSeed,
+  getWotDSeed: getSeed,
   getVersion,
 };

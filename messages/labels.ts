@@ -1,3 +1,5 @@
+import { GameType } from 'types';
+
 export const Labels = {
   SiteTitle: 'wordchachos!',
   PrivacyPolicy: 'Privacy policy',
@@ -37,8 +39,11 @@ export const Labels = {
   ConfirmationDefaultTitle: 'Are you sure?',
   ConfirmationCancel: 'Cancel',
   ConfirmationConfirm: 'OK',
-  GameTypeWordle: 'Wordle',
-  GameTypeRandom: 'Random',
+  GameTypeTitle: (type: GameType) => {
+    if (type === GameType.WotD) return 'original';
+    if (type === GameType.Wordle) return 'wordle';
+    return 'random';
+  },
   GameTypeRandomNew: 'Random+',
   ChangeGameType: 'If you switch game types, your progress in the current game will be lost!',
   StartANewGameButton: 'New game',

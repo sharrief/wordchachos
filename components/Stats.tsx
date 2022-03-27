@@ -8,6 +8,7 @@ export function Stats(props: {
   game: Game;
 }) {
   const { game, show } = props;
+  if (!game) return null;
   return <>
     <GameStats game={game} show={show} />
     <hr className="border border-1" />
