@@ -8,11 +8,13 @@ import { api } from 'api/_api';
 import { saveManyGamesToCache } from 'localStorage/saveManyGamesToCache';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import { Game, GameState, GameType } from 'types';
+import { getLocalGames } from 'localStorage/getLocalGames';
 import { useUser } from './data/useUser';
 import { useGames } from './data/useGames';
 
 const gameIsWordle = (g: Game) => g.type === GameType.wordle;
 const gameIsRandom = (g: Game) => g.type === GameType.random;
+const gameNotInList = (games: Game[]) => (g: Game) => !games.map(({ _id }) => _id).includes(g._id);
 
 export function Login() {
   const { data: user, mutate: refreshUser } = useUser();
@@ -22,7 +24,7 @@ export function Login() {
   const [localActiveWordle] = localActiveGames?.filter(gameIsWordle).sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1)) || [];
   const [localActiveRandom] = localActiveGames?.filter(gameIsRandom).sort((a, b) => (a.timestamp > b.timestamp ? 1 : -1)) || [];
   const allLocalGames = [...localPastGames, localActiveWordle, localActiveRandom];
-  const localOnlyGames = allLocalGames.filter((g) => g && !g._id);
+  const localOnlyGames = getLocalGames().filter(gameNotInList(games || []));
   const [hasAccount, setHasAccount] = useState(false);
   const [copiedPass, setCopiedPass] = useState(false);
   const [uploadWordleCount, setUploadWordleCount] = useState(0);
