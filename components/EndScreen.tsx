@@ -97,7 +97,7 @@ ${board.filter((_, idx) => idx < guesses)
         </ButtonGroup>
       </Container>
       <hr className="border border-1" />
-      <Stats />
+      <Stats game={game} show={show}/>
     </Modal.Body>
   </Modal>);
 }
