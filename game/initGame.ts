@@ -5,7 +5,7 @@ import { DateTime } from 'luxon';
 import { v4 as uuid } from 'uuid';
 import { getWotD } from 'game/getWotD';
 
-export const getUninitializedGame = (gameType = GameType.wordle, guessesAllowed = 6): Game => {
+export const getUninitializedGame = (gameType = GameType.WotD, guessesAllowed = 6): Game => {
   const answer = '';
   const guessLength = 5;
   const state = KeyState.Unused;

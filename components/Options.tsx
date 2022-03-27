@@ -15,20 +15,28 @@ export function Options(props: {
       <Col>
         <div>{Labels.ChooseGameType}</div>
         <ButtonGroup className='my-2'>
-          <Link href='/wordle' passHref={true}>
+          <Link href={'/wordOfTheDay'} passHref={true}>
             <Button
-              variant={gameType === GameType.wordle ? 'secondary' : 'outline-secondary'}
+              variant={gameType === GameType.WotD ? 'secondary' : 'outline-secondary'}
               onClick={() => setGameType()}
             >
-              {Labels.GameTypeWordle}
+              {Labels.GameTypeTitle(GameType.WotD)}
             </Button>
           </Link>
-          <Link href='/random' passHref={true}>
+          <Link href={'/wordle'} passHref={true}>
             <Button
-              variant={gameType === GameType.random ? 'secondary' : 'outline-secondary'}
+              variant={gameType === GameType.Wordle ? 'secondary' : 'outline-secondary'}
               onClick={() => setGameType()}
             >
-              <span>{Labels.GameTypeRandom}</span>
+              {Labels.GameTypeTitle(GameType.Wordle)}
+            </Button>
+          </Link>
+          <Link href={'/random'} passHref={true}>
+            <Button
+              variant={gameType === GameType.Random ? 'secondary' : 'outline-secondary'}
+              onClick={() => setGameType()}
+            >
+              <span>{Labels.GameTypeTitle(GameType.Random)}</span>
             </Button>
           </Link>
         </ButtonGroup>

@@ -35,7 +35,7 @@ export function EndScreen(props: {
   const guessesUsed = getGuessesUsed(board);
   const win = state === GameState.win;
   const loss = state === GameState.loss;
-  const gameResult = `${type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom} ${seed ?? ''} ${guesses}/${guessesAllowed}
+  const gameResult = `${Labels.GameTypeTitle(type)} ${seed ?? ''} ${guesses}/${guessesAllowed}
   
 ${board.filter((_, idx) => idx < guesses)
     .map(({ squares }) => squares.map(({ state: s }) => {
@@ -87,7 +87,7 @@ ${board.filter((_, idx) => idx < guesses)
           >{copied ? Labels.Copied : Labels.ShareGame} <Share />
             </Button>
           </CopyToClipboard>
-          {type === GameType.random
+          {type === GameType.Random
             && <Button
               variant='secondary'
               onClick={handleNewRandomGame}
@@ -97,7 +97,7 @@ ${board.filter((_, idx) => idx < guesses)
         </ButtonGroup>
       </Container>
       <hr className="border border-1" />
-      <Stats show={show} game={game}/>
+      <Stats game={game} show={show}/>
     </Modal.Body>
   </Modal>);
 }

@@ -29,7 +29,7 @@ export function KeyBoard(props: {
   const readyToSubmit = (squareIndex === guessLength);
   const canBackspace = squareIndex > 0;
   const gameOver = state !== GameState.active;
-  const canNewGame = gameOver && type === GameType.random;
+  const canNewGame = gameOver && type === GameType.Random;
   const guess = board?.[guessIndex]?.squares?.map(({ letter }) => letter) || [];
   const rowClass = 'justify-content-between d-flex mb-2';
   const firstRowLetters = 'qwertyuiop';

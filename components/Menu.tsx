@@ -4,7 +4,7 @@ import {
 import { Labels } from 'messages/labels';
 import { BarChart, Settings } from '@material-ui/icons';
 import { Options } from 'components/Options';
-import { Game, GameType } from 'types';
+import { Game } from 'types';
 import { useState } from 'react';
 import { Stats } from './Stats';
 
@@ -31,9 +31,7 @@ export function Menu(props: { game: Game, seed?: number; }) {
           size='sm'
           className='text-decoration-none d-flex'
           onClick={showOptions}>
-            <Settings /> {game.type === GameType.wordle
-              ? `${Labels.GameTypeWordle.toLowerCase()}`
-              : Labels.GameTypeRandom.toLowerCase()}
+            <Settings /> {Labels.GameTypeTitle(game.type).toLowerCase()}
           </Button>
           </Col>
         <Col xs='auto' className="text-center">
@@ -46,7 +44,7 @@ export function Menu(props: { game: Game, seed?: number; }) {
     </Container>
   </Navbar>
     <Modal show={showingStats} onHide={closeStats} centered>
-      <Modal.Header closeButton>{Labels.Statistics.toUpperCase()}: {game.type === GameType.wordle ? Labels.GameTypeWordle : Labels.GameTypeRandom}</Modal.Header>
+      <Modal.Header closeButton>{Labels.Statistics.toUpperCase()}: {Labels.GameTypeTitle(game.type)}</Modal.Header>
       <Modal.Body>
         <Stats show={showingStats} game={game} />
       </Modal.Body>
